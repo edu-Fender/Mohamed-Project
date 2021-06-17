@@ -1,0 +1,35 @@
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\obj\Debug\project.csprojAssemblyReference.cache
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\obj\Debug\project.InventoryForm.resources
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\obj\Debug\project.Form1.resources
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\obj\Debug\freelancer_project.Properties.Resources.resources
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\obj\Debug\freelancer project.exe
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\obj\Debug\freelancer project.pdb
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\bin\Debug\database.db
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\bin\Debug\freelancer project.exe.config
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\bin\Debug\freelancer project.exe
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\bin\Debug\freelancer project.pdb
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\bin\Debug\Dapper.dll
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\bin\Debug\System.Data.SQLite.dll
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\bin\Debug\Dapper.xml
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\bin\Debug\System.Data.SQLite.xml
+C:\Users\Visitante\source\repos\freelancer project\freelancer project\obj\Debug\project.csproj.CopyComplete
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.csprojAssemblyReference.cache
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.InventoryForm.resources
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\Visitante\source\repos\freelancer project\project\bin\Debug\database.db
+C:\Users\Visitante\source\repos\freelancer project\project\bin\Debug\Dapper.dll
+C:\Users\Visitante\source\repos\freelancer project\project\bin\Debug\System.Data.SQLite.dll
+C:\Users\Visitante\source\repos\freelancer project\project\bin\Debug\Dapper.xml
+C:\Users\Visitante\source\repos\freelancer project\project\bin\Debug\System.Data.SQLite.xml
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.csproj.CopyComplete
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.MainForm.resources
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.EmployeeForm.resources
+C:\Users\Visitante\source\repos\freelancer project\project\bin\Debug\project.exe.config
+C:\Users\Visitante\source\repos\freelancer project\project\bin\Debug\project.exe
+C:\Users\Visitante\source\repos\freelancer project\project\bin\Debug\project.pdb
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.exe
+C:\Users\Visitante\source\repos\freelancer project\project\obj\Debug\project.pdb
