@@ -21,7 +21,7 @@ namespace project
         {
             get
             {
-                return $"{Type} {Quantity} {Color} {Dimension} {StartPrice} {CurrentPrice} {Condition} {Description} {Warranty}\n\n";
+                return $"{Type}, {Quantity}, {Color}, {Dimension}, {StartPrice}, {CurrentPrice}, {Condition}, {Description}, {Warranty}\n\n";
             }
         }
     }

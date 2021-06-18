@@ -21,5 +21,11 @@ namespace project
             InventoryForm Form2 = new InventoryForm();  //calls 'WinnerForm'
             Form2.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SupplierForm Form3 = new SupplierForm();  //calls 'WinnerForm'
+            Form3.ShowDialog();
+        }
     }
 }

@@ -4,43 +4,37 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class EmployeeForm : Form
+    public partial class SupplierForm : Form
     {
-        List<EmployeeModel> employee = new List<EmployeeModel>();
+        List<SupplierModel> supplier = new List<SupplierModel>();
 
-        public EmployeeForm()
+        public SupplierForm()
         {
             InitializeComponent();
 
             comboBox1.Text = comboBox1.Items[0].ToString();
-            Connection.LoadEmployee();
+            Connection.LoadSupplier();
         }
-
-        private void LoadEmployeeList()
+        private void LoadSupplierList()
         {
-            employee = Connection.LoadEmployee();
+            supplier = Connection.LoadSupplier();
             listBox1.DataSource = null;
-            listBox1.DataSource = employee;
-            listBox1.DisplayMember = "FullEmployee";
+            listBox1.DataSource = supplier;
+            listBox1.DisplayMember = "FullSupplier";
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            EmployeeModel employee = new EmployeeModel
+            SupplierModel supplier = new SupplierModel
             {
+                Id = textBox1.Text,
+                Name = textBox2.Text,
                 Type = comboBox1.Text,
-                FirstName = textBox1.Text,
-                LastName = textBox2.Text,
-                DateOfBirth = dateTimePicker1.Text,
                 Number = textBox3.Text,
                 Email = textBox4.Text,
-                StartDate = dateTimePicker2.Text,
-                Salary = textBox7.Text,
-                Comission = textBox5.Text,
-                Password = textBox6.Text
+                Address = textBox5.Text,
             };
 
-            Connection.AddEmployee(employee);
+            Connection.AddSupplier(supplier);
 
             foreach (Control x in this.Controls)
             {
@@ -53,7 +47,7 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LoadEmployeeList();
+            LoadSupplierList();
         }
     }
 }

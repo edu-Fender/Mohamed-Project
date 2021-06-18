@@ -12,6 +12,7 @@ namespace project
         {
             InitializeComponent();
 
+            comboBox1.Text = comboBox1.Items[0].ToString();
             Connection.LoadInvetory();
         }
 
@@ -42,9 +43,9 @@ namespace project
 
             foreach (Control x in this.Controls)
             {
-                if (x is TextBox)
+                if (x is TextBox || x is ComboBox || x is DateTimePicker)
                 {
-                    ((TextBox)x).Text = String.Empty;
+                    x.Text = String.Empty;
                 }
             }
         }

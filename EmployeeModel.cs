@@ -22,7 +22,7 @@ namespace project
         {
             get
             {
-                return $"{Type} {FirstName} {LastName} {DateOfBirth} {Number} {Email} {StartDate} {Salary} {Comission} {Password}\n\n";
+                return $"{Type}, {FirstName}, {LastName}, {DateOfBirth}, {Number}, {Email}, {StartDate}, {Salary}, {Comission}, {Password}\n\n";
             }
         }
     }
