@@ -26,33 +26,38 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            foreach (Control ctrl in panel1.Controls)  //Check if TextBoxes are null
+            {
+                if (String.IsNullOrEmpty(ctrl.Text))
+                {
+                    MessageBox.Show("ALL FIELDS MUST BE FILLED!!");
+                    return;
+                }
+            }
+
             EmployeeModel employee = new EmployeeModel
             {
                 Type = comboBox1.Text,
                 FirstName = textBox1.Text,
                 LastName = textBox2.Text,
-                DateOfBirth = dateTimePicker1.Text,
-                Number = textBox3.Text,
-                Email = textBox4.Text,
-                StartDate = dateTimePicker2.Text,
+                DateOfBirth = textBox3.Text,
+                Number = textBox4.Text,
+                Email = textBox5.Text,
+                StartDate = textBox6.Text,
                 Salary = textBox7.Text,
-                Comission = textBox5.Text,
-                Password = textBox6.Text
+                Comission = textBox8.Text,
+                Password = textBox9.Text
             };
 
             Connection.AddEmployee(employee);
-
-            foreach (Control x in this.Controls)
-            {
-                if (x is TextBox || x is ComboBox || x is DateTimePicker)
-                {
-                    x.Text = String.Empty;
-                }
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            foreach (Control ctrl in panel1.Controls)  //Clear all TextBoxes
+            {
+                ctrl.Text = String.Empty;
+            }
             LoadEmployeeList();
         }
     }

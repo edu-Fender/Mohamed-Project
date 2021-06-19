@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace project
+﻿namespace project
 {
     public class EmployeeModel
     {
@@ -18,7 +12,7 @@ namespace project
         public string Salary { get; set; }
         public string Comission { get; set; }
         public string Password { get; set; }
-        public string FullEmployee 
+        public string FullEmployee
         {
             get
             {

@@ -26,6 +26,15 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
+            foreach (Control ctrl in panel1.Controls)  //Check if TextBoxes are null
+            {
+                if (String.IsNullOrEmpty(ctrl.Text))
+                {
+                    MessageBox.Show("ALL FIELDS MUST BE FILLED!!");
+                    return;
+                }
+            }
+
             InventoryModel inventory = new InventoryModel
             {
                 Type = comboBox1.Text,
@@ -40,18 +49,14 @@ namespace project
             };
 
             Connection.AddInventory(inventory);
-
-            foreach (Control x in this.Controls)
-            {
-                if (x is TextBox || x is ComboBox || x is DateTimePicker)
-                {
-                    x.Text = String.Empty;
-                }
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {            
+        {
+            foreach (Control ctrl in panel1.Controls)  //Clear all TextBoxes
+            {
+                ctrl.Text = String.Empty;
+            }
             LoadInventoryList();
         }
     }

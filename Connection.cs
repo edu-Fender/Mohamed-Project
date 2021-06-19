@@ -1,20 +1,24 @@
-﻿using System.Collections.Generic;
+﻿// ==================================================
+// File to deal with connections to SQLite Database
+// ==================================================
+
+using Dapper;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SQLite;
 using System.Linq;
-using Dapper;
 
 namespace project
 {
     public class Connection
-    {   
+    {
         public static void AddEmployee(EmployeeModel Employee)
         {
             using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
             {
                 connect.Execute("insert into tblEmployees (Type, FirstName, LastName, DateOfBirth, Number, Email, StartDate, Salary, Comission, Password) values (@Type, @FirstName, @LastName, @DateOfBirth, @Number, @Email, @StartDate, @Salary, @Comission, @Password)", Employee);
-                
+
             }
         }
         public static List<EmployeeModel> LoadEmployee()
@@ -40,7 +44,7 @@ namespace project
                 return output2.ToList();
             }
         }
-        public static void AddSupplier(SupplierModel Supplier) 
+        public static void AddSupplier(SupplierModel Supplier)
         {
             using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
             {
