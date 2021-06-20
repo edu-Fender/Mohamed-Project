@@ -26,14 +26,25 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in panel1.Controls)  //Check if TextBoxes are null
+            foreach (Control ctrl in panel1.Controls)  //Check if some field is null
             {
                 if (String.IsNullOrEmpty(ctrl.Text))
                 {
-                    MessageBox.Show("ALL FIELDS MUST BE FILLED!!");
+                    MessageBox.Show("ERROR: ALL FIELDS MUST BE FILLED!!");
                     return;
                 }
             }
+
+            try  // Check if the fields that must be integers are intergers
+            {
+                int.Parse(textBox7.Text);
+                int.Parse(textBox8.Text);
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: FIELDS 'SALARY' AND 'COMISSION' MUST BE INTEGERS");
+                return;
+            }             
 
             EmployeeModel employee = new EmployeeModel
             {

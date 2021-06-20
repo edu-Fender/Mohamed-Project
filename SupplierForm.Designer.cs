@@ -42,11 +42,11 @@ namespace project
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,6 +185,13 @@ namespace project
             this.comboBox1.TabIndex = 86;
             this.comboBox1.Tag = "";
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(0, 110);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(190, 20);
+            this.textBox3.TabIndex = 87;
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(0, 184);
@@ -193,6 +200,13 @@ namespace project
             this.textBox5.Size = new System.Drawing.Size(190, 40);
             this.textBox5.TabIndex = 89;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(190, 20);
+            this.textBox1.TabIndex = 84;
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(0, 149);
@@ -200,26 +214,12 @@ namespace project
             this.textBox4.Size = new System.Drawing.Size(190, 20);
             this.textBox4.TabIndex = 88;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(0, 110);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(190, 20);
-            this.textBox3.TabIndex = 87;
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(0, 36);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(190, 20);
             this.textBox2.TabIndex = 85;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 1);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 20);
-            this.textBox1.TabIndex = 84;
             // 
             // SupplierForm
             // 

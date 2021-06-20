@@ -24,13 +24,23 @@ namespace project
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in panel1.Controls)  //Check if TextBoxes are null
+            foreach (Control ctrl in panel1.Controls)  //Check if some field is null
             {
                 if (String.IsNullOrEmpty(ctrl.Text))
                 {
-                    MessageBox.Show("ALL FIELDS MUST BE FILLED!!");
+                    MessageBox.Show("ERROR: ALL FIELDS MUST BE FILLED!!");
                     return;
                 }
+            }
+
+            try  // Check if the fields that must be integers are intergers
+            {
+                int.Parse(textBox1.Text);
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: FIELD 'ID' MUST BE AN INTEGER");
+                return;
             }
 
             SupplierModel supplier = new SupplierModel

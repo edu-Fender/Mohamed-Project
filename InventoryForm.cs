@@ -26,13 +26,25 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in panel1.Controls)  //Check if TextBoxes are null
+            foreach (Control ctrl in panel1.Controls)  //Check if some field is null
             {
                 if (String.IsNullOrEmpty(ctrl.Text))
                 {
-                    MessageBox.Show("ALL FIELDS MUST BE FILLED!!");
+                    MessageBox.Show("ERROR: ALL FIELDS MUST BE FILLED!!");
                     return;
                 }
+            }
+
+            try  // Check if the fields that must be integers are intergers
+            {
+                int.Parse(textBox1.Text);
+                int.Parse(textBox4.Text);
+                int.Parse(textBox5.Text);
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: FIELDS 'QUANTITY', 'START PRICE' AND 'CURRENT PRICE' MUST BE INTEGERS");
+                return;
             }
 
             InventoryModel inventory = new InventoryModel
