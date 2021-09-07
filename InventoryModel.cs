@@ -15,7 +15,7 @@
         {
             get
             {
-                return $"{Type}, {Quantity}, {Color}, {Dimension}, {StartPrice}, {CurrentPrice}, {Condition}, {Description}, {Warranty}\n\n";
+                return $"Type: {Type}        Quantity: {Quantity}        Color: {Color}        Dimension: {Dimension}        Start Price: {StartPrice}        Current Price: {CurrentPrice}        Condition: {Condition}        Description: {Description}        Warranty: {Warranty}\n\n";
             }
         }
     }

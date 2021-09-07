@@ -16,7 +16,7 @@
         {
             get
             {
-                return $"{Type}, {FirstName}, {LastName}, {DateOfBirth}, {Number}, {Email}, {StartDate}, {Salary}, {Comission}, {Password}\n\n";
+                return $"Type: {Type}        FirstName: {FirstName}        LastName: {LastName}        DateOfBirth: {DateOfBirth}        Number: {Number}        Email: {Email}        StartDate: {StartDate}        Salary: {Salary}        Comission: {Comission}        Password: {Password}\n\n";
             }
         }
     }

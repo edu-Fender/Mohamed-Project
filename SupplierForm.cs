@@ -6,22 +6,15 @@ namespace project
 {
     public partial class SupplierForm : Form
     {
-        List<SupplierModel> supplier = new List<SupplierModel>();
+        public int refresh { get; private set; }
 
         public SupplierForm()
         {
             InitializeComponent();
 
             comboBox1.Text = comboBox1.Items[0].ToString();  //Set default value of comboBox1
-            Connection.LoadSupplier();
         }
-        private void LoadSupplierList()
-        {
-            supplier = Connection.LoadSupplier();
-            listBox1.DataSource = null;
-            listBox1.DataSource = supplier;
-            listBox1.DisplayMember = "FullSupplier";
-        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (Control ctrl in panel1.Controls)  //Check if some field is null
@@ -45,7 +38,7 @@ namespace project
 
             SupplierModel supplier = new SupplierModel
             {
-                Id = textBox1.Text,
+                SupplierId = textBox1.Text,
                 Name = textBox2.Text,
                 Type = comboBox1.Text,
                 Number = textBox3.Text,
@@ -58,11 +51,24 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in panel1.Controls)  //Clear all TextBoxes
+            foreach (Control ctrl in panel1.Controls)  // Checks if weather of the textbox were filled
             {
-                ctrl.Text = String.Empty;
+                if (String.IsNullOrEmpty(ctrl.Text) == false)
+                {
+                    DialogResult mb = MessageBox.Show("YOU LEFT CHANGES UNSAVED. ARE YOU SURE YOU WANT TO CONTINUE?", "ATTENTION", MessageBoxButtons.YesNo);
+
+                    if (mb == DialogResult.Yes)
+                    {
+                        this.Close();
+                    }
+                    else if (mb == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
             }
-            LoadSupplierList();
+
+            this.Close();  // In case all the Text Box were empty
         }
     }
 }

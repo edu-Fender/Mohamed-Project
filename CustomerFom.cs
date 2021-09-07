@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace project
 {
-    public partial class EmployeeForm : Form
+    public partial class CustomerFom : Form
     {
         public int refresh { get; private set; }
 
-        public EmployeeForm()
+        public CustomerFom()
         {
             InitializeComponent();
-
-            comboBox1.Text = comboBox1.Items[0].ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,32 +32,26 @@ namespace project
 
             try  // Check if the fields that must be integers are intergers
             {
-                int.Parse(textBox7.Text);
-                int.Parse(textBox8.Text);
+                int.Parse(textBox1.Text);
             }
             catch
             {
-                MessageBox.Show("ERROR: FIELDS 'SALARY' AND 'COMISSION' MUST BE INTEGERS");
+                MessageBox.Show("ERROR: FIELD 'CUSTOMER ID' MUST BE INTEGER!");
                 return;
-            }             
+            }
 
-            EmployeeModel employee = new EmployeeModel
+            CustomerModel customer = new CustomerModel
             {
-                Type = comboBox1.Text,
-                FirstName = textBox1.Text,
-                LastName = textBox2.Text,
-                DateOfBirth = textBox3.Text,
-                Number = textBox4.Text,
-                Email = textBox5.Text,
-                StartDate = textBox6.Text,
-                Salary = textBox7.Text,
-                Comission = textBox8.Text,
-                Password = textBox9.Text
+                CustomerId = textBox1.Text,
+                FirstName = textBox2.Text,
+                LastName = textBox3.Text,
+                Email = textBox4.Text,
+                Number = textBox5.Text,
+                Address = textBox6.Text,
             };
 
-            Connection.AddEmployee(employee);
+            Connection.AddCustomer(customer);
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             foreach (Control ctrl in panel1.Controls)  // Checks if weather of the textbox were filled

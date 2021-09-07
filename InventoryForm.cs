@@ -6,22 +6,13 @@ namespace project
 {
     public partial class InventoryForm : Form
     {
-        List<InventoryModel> inventory = new List<InventoryModel>();
+        public int refresh { get; private set; }
 
         public InventoryForm()
         {
             InitializeComponent();
 
             comboBox1.Text = comboBox1.Items[0].ToString();
-            Connection.LoadInvetory();
-        }
-
-        private void LoadInventoryList()
-        {
-            inventory = Connection.LoadInvetory();
-            listBox1.DataSource = null;
-            listBox1.DataSource = inventory;
-            listBox1.DisplayMember = "FullInventory";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,11 +56,24 @@ namespace project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in panel1.Controls)  //Clear all TextBoxes
+            foreach (Control ctrl in panel1.Controls)  // Checks if weather of the textbox were filled
             {
-                ctrl.Text = String.Empty;
+                if (String.IsNullOrEmpty(ctrl.Text) == false)
+                {
+                    DialogResult mb = MessageBox.Show("YOU LEFT CHANGES UNSAVED. ARE YOU SURE YOU WANT TO CONTINUE?", "ATTENTION", MessageBoxButtons.YesNo);
+
+                    if (mb == DialogResult.Yes)
+                    {
+                        this.Close();
+                    }
+                    else if (mb == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
             }
-            LoadInventoryList();
+
+            this.Close();  // In case all the Text Box were empty
         }
     }
 }

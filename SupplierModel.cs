@@ -2,7 +2,7 @@
 {
     public class SupplierModel
     {
-        public string Id { get; set; }
+        public string SupplierId { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
         public string Number { get; set; }
@@ -12,7 +12,7 @@
         {
             get
             {
-                return $"{Id}, {Name}, {Type}, {Number}, {Email}, {Address}\n\n";
+                return $"Supplier Id: {SupplierId}        Name: {Name}        Type: {Type}        Number: {Number}        Email: {Email}        Address: {Address}\n\n";
             }
         }
     }

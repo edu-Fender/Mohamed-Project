@@ -13,6 +13,22 @@ namespace project
 {
     public class Connection
     {
+        public static void AddCustomer(CustomerModel Customer)
+        {
+            using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
+            {
+                connect.Execute("insert into tblEmployees (CustomerId, FirstName, LastName, Email, Number, Address) values (@CustomerId, @FirstName, @LastName, @Email, @Number, @Address)", Customer);
+            }
+        }
+        public static List<CustomerModel> LoadCustomer()
+        {
+            using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
+            {
+                var output = connect.Query<CustomerModel>("select * from tblCustomers", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+
         public static void AddEmployee(EmployeeModel Employee)
         {
             using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
@@ -25,8 +41,8 @@ namespace project
         {
             using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
             {
-                var output1 = connect.Query<EmployeeModel>("select * from tblEmployees", new DynamicParameters());
-                return output1.ToList();
+                var output = connect.Query<EmployeeModel>("select * from tblEmployees", new DynamicParameters());
+                return output.ToList();
             }
         }
         public static void AddInventory(InventoryModel Inventory)
@@ -40,23 +56,45 @@ namespace project
         {
             using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
             {
-                var output2 = connect.Query<InventoryModel>("select * from tblInventory", new DynamicParameters());
-                return output2.ToList();
+                var output = connect.Query<InventoryModel>("select * from tblInventory", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+        public static void AddSale(SaleModel Sale)
+        {
+            using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
+            {
+                connect.Execute("insert into tblSales (ItemId, CustomerId, EmployeeId, SaleDate, SaleAmount, SaleQty, DeliveryAmount, PaymentMethod) values (@ItemId, @CustomerId, @EmployeeId, @SaleDate, @SaleAmount, @SaleQty, @DeliveryAmount, @PaymentMethod)", Sale);
+            }
+        }
+        public static List<SaleModel> LoadSale()
+        {
+            using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
+            {
+                var output = connect.Query<SaleModel>("select * from tblSales", new DynamicParameters());
+                return output.ToList();
+            }
+        }
+        public static void UpdateSale(SaleModel Sale, int id)
+        {
+            using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
+            {
+                connect.Execute($"update tblSales set ItemId = @ItemId, CustomerId = @CustomerId, EmployeeId = @EmployeeId, SaleDate = @SaleDate, SaleAmount = @SaleAmount, SaleQty = @SaleQty, DeliveryAmount = @DeliveryAmount, PaymentMethod = @PaymentMethod where Id = {id+1}", Sale);
             }
         }
         public static void AddSupplier(SupplierModel Supplier)
         {
             using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
             {
-                connect.Execute("insert into tblSuppliers (Id, Name, Type, Number, Email, Address) values (@Id, @Name, @Type, @Number, @Email, @Address)", Supplier);
+                connect.Execute("insert into tblSuppliers (SupplierId, Name, Type, Number, Email, Address) values (@SupplierId, @Name, @Type, @Number, @Email, @Address)", Supplier);
             }
         }
         public static List<SupplierModel> LoadSupplier()
         {
             using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))
             {
-                var output3 = connect.Query<SupplierModel>("select * from tblSuppliers", new DynamicParameters()).ToList();
-                return output3.ToList();
+                var output = connect.Query<SupplierModel>("select * from tblSuppliers", new DynamicParameters()).ToList();
+                return output.ToList();
             }
         }
     }
