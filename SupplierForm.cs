@@ -46,7 +46,7 @@ namespace project
                 Address = textBox5.Text,
             };
 
-            Connection.AddSupplier(supplier);
+            Connection.AddRecord(supplier);
         }
 
         private void button2_Click(object sender, EventArgs e)

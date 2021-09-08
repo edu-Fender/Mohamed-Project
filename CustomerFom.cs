@@ -50,7 +50,7 @@ namespace project
                 Address = textBox6.Text,
             };
 
-            Connection.AddCustomer(customer);
+            Connection.AddRecord(customer);
         }
         private void button2_Click(object sender, EventArgs e)
         {

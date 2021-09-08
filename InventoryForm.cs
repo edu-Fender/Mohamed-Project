@@ -51,7 +51,7 @@ namespace project
                 Warranty = textBox8.Text
             };
 
-            Connection.AddInventory(inventory);
+            Connection.AddRecord(inventory);
         }
 
         private void button2_Click(object sender, EventArgs e)

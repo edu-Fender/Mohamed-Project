@@ -12,25 +12,37 @@ namespace project
 {
     public partial class SaleForm : Form
     {
-        private int? index;
+        private int? _selectedIndex;
 
-        public SaleForm(int? id)
+        public SaleForm(int? selectedIndex, bool flag)
         {
             InitializeComponent();
 
-            if (id != null)  // If id not null, means if any item was selected on the TextBox of the MainForm when this form was called
+            if (flag == true)
             {
-                List<SaleModel> sale = Connection.LoadSale();
-                index = id;
-                
-                textBox1.Text = sale[id.Value].ItemId;
-                textBox2.Text = sale[id.Value].CustomerId;
-                textBox3.Text = sale[id.Value].EmployeeId;
-                textBox4.Text = sale[id.Value].SaleDate;
-                textBox5.Text = sale[id.Value].SaleAmount;
-                textBox6.Text = sale[id.Value].SaleQty;
-                textBox7.Text = sale[id.Value].DeliveryAmount;
-                textBox8.Text = sale[id.Value].PaymentMethod;
+                button1.Enabled = false;
+
+                foreach (TextBox cntrl in panel1.Controls)
+                {
+                    cntrl.ReadOnly = true;
+                }
+            }
+
+            if (selectedIndex != null)  // If selectedIndex not null, if any item was selected on the TextBox of the MainForm when this form was called
+            {
+                _selectedIndex = selectedIndex;
+                List<SaleModel> sale = Connection.LoadRecords<SaleModel>();
+                                
+                textBox1.Text = sale[selectedIndex.Value].ItemId;
+                textBox2.Text = sale[selectedIndex.Value].CustomerId;
+                textBox3.Text = sale[selectedIndex.Value].EmployeeId;
+                textBox4.Text = sale[selectedIndex.Value].SaleDate;
+                textBox5.Text = sale[selectedIndex.Value].SaleAmount;
+                textBox6.Text = sale[selectedIndex.Value].SaleQty;
+                textBox7.Text = sale[selectedIndex.Value].DeliveryAmount;
+                textBox8.Text = sale[selectedIndex.Value].PaymentMethod;
+
+                button1.Enabled = false;
             }  
         }
 
@@ -73,13 +85,13 @@ namespace project
                 PaymentMethod = textBox8.Text,
             };
 
-            if (index == null)
+            if (_selectedIndex == null)
             {
-                Connection.AddSale(sale);
+                Connection.AddRecord(sale);
             }          
-            else if (index != null)
+            else if (_selectedIndex != null)
             {
-                Connection.UpdateSale(sale, index.Value);
+                Connection.UpdateRecord(sale, _selectedIndex.Value);
             }
             this.Close();
             

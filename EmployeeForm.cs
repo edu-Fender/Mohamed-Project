@@ -51,7 +51,7 @@ namespace project
                 Password = textBox9.Text
             };
 
-            Connection.AddEmployee(employee);
+            Connection.AddRecord(employee);
         }
 
         private void button2_Click(object sender, EventArgs e)
