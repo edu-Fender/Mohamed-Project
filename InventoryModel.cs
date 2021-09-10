@@ -2,6 +2,7 @@
 {
     public class InventoryModel
     {
+        public string Id { get; private set; }
         public string Type { get; set; }
         public string Quantity { get; set; }
         public string Color { get; set; }
@@ -11,11 +12,11 @@
         public string Condition { get; set; }
         public string Description { get; set; }
         public string Warranty { get; set; }
-        public string FullInventory
+        public string FullString
         {
             get
             {
-                return $"Type: {Type}        Quantity: {Quantity}        Color: {Color}        Dimension: {Dimension}        Start Price: {StartPrice}        Current Price: {CurrentPrice}        Condition: {Condition}        Description: {Description}        Warranty: {Warranty}\n\n";
+                return $"{Type} {Quantity} {Color} {Dimension} {StartPrice} {CurrentPrice} {Condition} {Description} {Warranty}";
             }
         }
     }

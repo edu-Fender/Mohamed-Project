@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace project
+﻿namespace project
 {
     public class CustomerModel
     {
@@ -15,11 +9,11 @@ namespace project
         public string Email { get; set; }
         public string Number { get; set; }
         public string Address { get; set; }
-        public string FullCustomer
+        public string FullString
         {
             get
             {
-                return $"{Id}        Customer Id: {CustomerId}        First Name: {FirstName}        Last Name: {LastName}        Email: {Email}        Number: {Number}        Address: {Address}\n\n";
+                return $"{Id} {CustomerId} {FirstName} {LastName} {Email} {Number} {Address}";
             }
         }
     }

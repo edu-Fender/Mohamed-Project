@@ -39,36 +39,80 @@ namespace project
             this.yToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Suppliers = new System.Windows.Forms.TabPage();
+            this.listView5 = new System.Windows.Forms.ListView();
+            this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader40 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader41 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader42 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader43 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader44 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader45 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button15 = new System.Windows.Forms.Button();
-            this.listBox5 = new System.Windows.Forms.ListBox();
             this.Employees = new System.Windows.Forms.TabPage();
+            this.listView4 = new System.Windows.Forms.ListView();
+            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader29 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader30 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader31 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader32 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader33 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
-            this.listBox4 = new System.Windows.Forms.ListBox();
             this.Costumers = new System.Windows.Forms.TabPage();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
-            this.listBox3 = new System.Windows.Forms.ListBox();
             this.Inventory = new System.Windows.Forms.TabPage();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.Sales = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.Suppliers.SuspendLayout();
@@ -130,17 +174,70 @@ namespace project
             // 
             // Suppliers
             // 
+            this.Suppliers.Controls.Add(this.listView5);
             this.Suppliers.Controls.Add(this.button13);
             this.Suppliers.Controls.Add(this.button14);
             this.Suppliers.Controls.Add(this.panel5);
             this.Suppliers.Controls.Add(this.button15);
-            this.Suppliers.Controls.Add(this.listBox5);
             this.Suppliers.Location = new System.Drawing.Point(4, 22);
             this.Suppliers.Name = "Suppliers";
             this.Suppliers.Size = new System.Drawing.Size(792, 421);
             this.Suppliers.TabIndex = 4;
             this.Suppliers.Text = "Suppliers";
             this.Suppliers.UseVisualStyleBackColor = true;
+            // 
+            // listView5
+            // 
+            this.listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader39,
+            this.columnHeader40,
+            this.columnHeader41,
+            this.columnHeader42,
+            this.columnHeader43,
+            this.columnHeader44,
+            this.columnHeader45});
+            this.listView5.FullRowSelect = true;
+            this.listView5.HideSelection = false;
+            this.listView5.Location = new System.Drawing.Point(1, 6);
+            this.listView5.Name = "listView5";
+            this.listView5.Size = new System.Drawing.Size(792, 343);
+            this.listView5.TabIndex = 15;
+            this.listView5.UseCompatibleStateImageBehavior = false;
+            this.listView5.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader39
+            // 
+            this.columnHeader39.Text = "ID";
+            // 
+            // columnHeader40
+            // 
+            this.columnHeader40.Text = "Supplier ID";
+            this.columnHeader40.Width = 120;
+            // 
+            // columnHeader41
+            // 
+            this.columnHeader41.Text = "Name";
+            this.columnHeader41.Width = 120;
+            // 
+            // columnHeader42
+            // 
+            this.columnHeader42.Text = "Type";
+            this.columnHeader42.Width = 120;
+            // 
+            // columnHeader43
+            // 
+            this.columnHeader43.Text = "Number";
+            this.columnHeader43.Width = 120;
+            // 
+            // columnHeader44
+            // 
+            this.columnHeader44.Text = "Email";
+            this.columnHeader44.Width = 120;
+            // 
+            // columnHeader45
+            // 
+            this.columnHeader45.Text = "Address";
+            this.columnHeader45.Width = 120;
             // 
             // button13
             // 
@@ -178,27 +275,93 @@ namespace project
             this.button15.Text = "ADD NEW RECORD";
             this.button15.UseVisualStyleBackColor = true;
             // 
-            // listBox5
-            // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(2, 3);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(784, 342);
-            this.listBox5.TabIndex = 8;
-            // 
             // Employees
             // 
+            this.Employees.Controls.Add(this.listView4);
             this.Employees.Controls.Add(this.button10);
             this.Employees.Controls.Add(this.button11);
             this.Employees.Controls.Add(this.panel4);
             this.Employees.Controls.Add(this.button12);
-            this.Employees.Controls.Add(this.listBox4);
             this.Employees.Location = new System.Drawing.Point(4, 22);
             this.Employees.Name = "Employees";
             this.Employees.Size = new System.Drawing.Size(792, 421);
             this.Employees.TabIndex = 3;
             this.Employees.Text = "Employees";
             this.Employees.UseVisualStyleBackColor = true;
+            // 
+            // listView4
+            // 
+            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader27,
+            this.columnHeader28,
+            this.columnHeader29,
+            this.columnHeader30,
+            this.columnHeader31,
+            this.columnHeader32,
+            this.columnHeader33,
+            this.columnHeader34,
+            this.columnHeader35,
+            this.columnHeader36,
+            this.columnHeader37});
+            this.listView4.FullRowSelect = true;
+            this.listView4.HideSelection = false;
+            this.listView4.Location = new System.Drawing.Point(1, 2);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(792, 343);
+            this.listView4.TabIndex = 14;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            this.listView4.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader27
+            // 
+            this.columnHeader27.Text = "ID";
+            // 
+            // columnHeader28
+            // 
+            this.columnHeader28.Text = "Type";
+            this.columnHeader28.Width = 120;
+            // 
+            // columnHeader29
+            // 
+            this.columnHeader29.Text = "First Name";
+            this.columnHeader29.Width = 120;
+            // 
+            // columnHeader30
+            // 
+            this.columnHeader30.Text = "Last Name";
+            this.columnHeader30.Width = 120;
+            // 
+            // columnHeader31
+            // 
+            this.columnHeader31.Text = "Date of Birth";
+            this.columnHeader31.Width = 120;
+            // 
+            // columnHeader32
+            // 
+            this.columnHeader32.Text = "Number";
+            this.columnHeader32.Width = 120;
+            // 
+            // columnHeader33
+            // 
+            this.columnHeader33.Text = "Email";
+            this.columnHeader33.Width = 120;
+            // 
+            // columnHeader34
+            // 
+            this.columnHeader34.Text = "Start Date";
+            this.columnHeader34.Width = 120;
+            // 
+            // columnHeader35
+            // 
+            this.columnHeader35.Text = "Salary";
+            // 
+            // columnHeader36
+            // 
+            this.columnHeader36.Text = "Comission";
+            // 
+            // columnHeader37
+            // 
+            this.columnHeader37.Text = "Password";
             // 
             // button10
             // 
@@ -236,27 +399,72 @@ namespace project
             this.button12.Text = "ADD NEW RECORD";
             this.button12.UseVisualStyleBackColor = true;
             // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(2, 3);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(784, 342);
-            this.listBox4.TabIndex = 8;
-            // 
             // Costumers
             // 
+            this.Costumers.Controls.Add(this.listView3);
             this.Costumers.Controls.Add(this.button7);
             this.Costumers.Controls.Add(this.button8);
             this.Costumers.Controls.Add(this.panel3);
             this.Costumers.Controls.Add(this.button9);
-            this.Costumers.Controls.Add(this.listBox3);
             this.Costumers.Location = new System.Drawing.Point(4, 22);
             this.Costumers.Name = "Costumers";
             this.Costumers.Size = new System.Drawing.Size(792, 421);
             this.Costumers.TabIndex = 2;
             this.Costumers.Text = "Costumers";
             this.Costumers.UseVisualStyleBackColor = true;
+            // 
+            // listView3
+            // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader20,
+            this.columnHeader21,
+            this.columnHeader22,
+            this.columnHeader23,
+            this.columnHeader24,
+            this.columnHeader25,
+            this.columnHeader26});
+            this.listView3.FullRowSelect = true;
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(1, 2);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(792, 343);
+            this.listView3.TabIndex = 13;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader20
+            // 
+            this.columnHeader20.Text = "ID";
+            // 
+            // columnHeader21
+            // 
+            this.columnHeader21.Text = "Customer ID";
+            this.columnHeader21.Width = 120;
+            // 
+            // columnHeader22
+            // 
+            this.columnHeader22.Text = "First Name";
+            this.columnHeader22.Width = 120;
+            // 
+            // columnHeader23
+            // 
+            this.columnHeader23.Text = "Last Name";
+            this.columnHeader23.Width = 120;
+            // 
+            // columnHeader24
+            // 
+            this.columnHeader24.Text = "Email";
+            this.columnHeader24.Width = 120;
+            // 
+            // columnHeader25
+            // 
+            this.columnHeader25.Text = "Number";
+            this.columnHeader25.Width = 120;
+            // 
+            // columnHeader26
+            // 
+            this.columnHeader26.Text = "Address";
+            this.columnHeader26.Width = 120;
             // 
             // button7
             // 
@@ -294,21 +502,13 @@ namespace project
             this.button9.Text = "ADD NEW RECORD";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(2, 3);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(784, 342);
-            this.listBox3.TabIndex = 8;
-            // 
             // Inventory
             // 
+            this.Inventory.Controls.Add(this.listView2);
             this.Inventory.Controls.Add(this.button4);
             this.Inventory.Controls.Add(this.button5);
             this.Inventory.Controls.Add(this.panel2);
             this.Inventory.Controls.Add(this.button6);
-            this.Inventory.Controls.Add(this.listBox2);
             this.Inventory.Location = new System.Drawing.Point(4, 22);
             this.Inventory.Name = "Inventory";
             this.Inventory.Padding = new System.Windows.Forms.Padding(3);
@@ -316,6 +516,72 @@ namespace project
             this.Inventory.TabIndex = 1;
             this.Inventory.Text = "Inventory";
             this.Inventory.UseVisualStyleBackColor = true;
+            // 
+            // listView2
+            // 
+            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader10,
+            this.columnHeader11,
+            this.columnHeader12,
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18,
+            this.columnHeader19});
+            this.listView2.FullRowSelect = true;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(1, 2);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(792, 343);
+            this.listView2.TabIndex = 13;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "ID";
+            // 
+            // columnHeader11
+            // 
+            this.columnHeader11.Text = "Type";
+            this.columnHeader11.Width = 120;
+            // 
+            // columnHeader12
+            // 
+            this.columnHeader12.Text = "Quantity";
+            this.columnHeader12.Width = 120;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Color";
+            this.columnHeader13.Width = 120;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Dimension";
+            this.columnHeader14.Width = 120;
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Start Price";
+            this.columnHeader15.Width = 120;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Current Price";
+            this.columnHeader16.Width = 120;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Condition";
+            this.columnHeader17.Width = 120;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Description";
+            this.columnHeader18.Width = 120;
             // 
             // button4
             // 
@@ -353,17 +619,9 @@ namespace project
             this.button6.Text = "ADD NEW RECORD";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(2, 3);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(784, 342);
-            this.listBox2.TabIndex = 8;
-            // 
             // Sales
             // 
-            this.Sales.Controls.Add(this.listBox1);
+            this.Sales.Controls.Add(this.listView1);
             this.Sales.Controls.Add(this.button1);
             this.Sales.Controls.Add(this.button2);
             this.Sales.Controls.Add(this.panel1);
@@ -376,13 +634,70 @@ namespace project
             this.Sales.Text = "Sales";
             this.Sales.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listView1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(2, 3);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(784, 342);
-            this.listBox1.TabIndex = 2;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9});
+            this.listView1.FullRowSelect = true;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(1, 2);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(792, 343);
+            this.listView1.TabIndex = 8;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Item ID";
+            this.columnHeader2.Width = 120;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Customer ID";
+            this.columnHeader3.Width = 120;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Employee ID";
+            this.columnHeader4.Width = 120;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Sale Date";
+            this.columnHeader5.Width = 120;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Sale Amount";
+            this.columnHeader6.Width = 120;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Sale Qty";
+            this.columnHeader7.Width = 120;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Delivery Amount";
+            this.columnHeader8.Width = 120;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Payment Method";
+            this.columnHeader9.Width = 120;
             // 
             // button1
             // 
@@ -436,6 +751,11 @@ namespace project
             this.tabControl1.Size = new System.Drawing.Size(800, 447);
             this.tabControl1.TabIndex = 8;
             // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Warranty";
+            this.columnHeader19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -469,19 +789,14 @@ namespace project
         private System.Windows.Forms.ToolStripMenuItem yToolStripMenuItem1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TabPage Suppliers;
-        private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.TabPage Employees;
-        private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.TabPage Costumers;
-        private System.Windows.Forms.ListBox listBox3;
         private System.Windows.Forms.TabPage Inventory;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.TabPage Sales;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
@@ -499,5 +814,54 @@ namespace project
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ColumnHeader columnHeader20;
+        private System.Windows.Forms.ColumnHeader columnHeader21;
+        private System.Windows.Forms.ColumnHeader columnHeader22;
+        private System.Windows.Forms.ColumnHeader columnHeader23;
+        private System.Windows.Forms.ColumnHeader columnHeader24;
+        private System.Windows.Forms.ColumnHeader columnHeader25;
+        private System.Windows.Forms.ColumnHeader columnHeader26;
+        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ColumnHeader columnHeader27;
+        private System.Windows.Forms.ColumnHeader columnHeader28;
+        private System.Windows.Forms.ColumnHeader columnHeader29;
+        private System.Windows.Forms.ColumnHeader columnHeader30;
+        private System.Windows.Forms.ColumnHeader columnHeader31;
+        private System.Windows.Forms.ColumnHeader columnHeader32;
+        private System.Windows.Forms.ColumnHeader columnHeader33;
+        private System.Windows.Forms.ColumnHeader columnHeader34;
+        private System.Windows.Forms.ListView listView5;
+        private System.Windows.Forms.ColumnHeader columnHeader39;
+        private System.Windows.Forms.ColumnHeader columnHeader40;
+        private System.Windows.Forms.ColumnHeader columnHeader41;
+        private System.Windows.Forms.ColumnHeader columnHeader42;
+        private System.Windows.Forms.ColumnHeader columnHeader43;
+        private System.Windows.Forms.ColumnHeader columnHeader44;
+        private System.Windows.Forms.ColumnHeader columnHeader45;
+        private System.Windows.Forms.ColumnHeader columnHeader35;
+        private System.Windows.Forms.ColumnHeader columnHeader36;
+        private System.Windows.Forms.ColumnHeader columnHeader37;
+        private System.Windows.Forms.ColumnHeader columnHeader19;
     }
 }

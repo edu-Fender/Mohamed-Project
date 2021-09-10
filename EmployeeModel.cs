@@ -2,6 +2,7 @@
 {
     public class EmployeeModel
     {
+        public string Id { get; private set; }
         public string Type { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -12,11 +13,11 @@
         public string Salary { get; set; }
         public string Comission { get; set; }
         public string Password { get; set; }
-        public string FullEmployee
+        public string FullString
         {
             get
             {
-                return $"Type: {Type}        FirstName: {FirstName}        LastName: {LastName}        DateOfBirth: {DateOfBirth}        Number: {Number}        Email: {Email}        StartDate: {StartDate}        Salary: {Salary}        Comission: {Comission}        Password: {Password}\n\n";
+                return $"{Type} {FirstName} {LastName} {DateOfBirth} {Number} {Email} {StartDate} {Salary} {Comission} {Password}";
             }
         }
     }

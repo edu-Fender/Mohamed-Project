@@ -5,8 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
+using System.Reflection;
+using System.IO;
+using System.Dynamic;
 
 namespace project
 {
@@ -17,39 +22,42 @@ namespace project
         {
             InitializeComponent();
 
-            refresh<SaleModel>(listBox1, "FullSale");
-            refresh<InventoryModel>(listBox2, "FullInventory");
-            refresh<CustomerModel>(listBox3, "FullCustomer");
-            refresh<EmployeeModel>(listBox4, "FullEmployee");
-            refresh<SupplierModel>(listBox5, "FullSupplier");
+            refresh<SaleModel>(listView1);
+            refresh<InventoryModel>(listView2);
+            refresh<CustomerModel>(listView3);
+            refresh<EmployeeModel>(listView4);
+            refresh<SupplierModel>(listView5);
         }
 
-        // This function will add the database info to the List Boxes
-        public void refresh<T>(ListBox lb, string displayMember)  
+        public void refresh<T>(ListView lv)
         {
-            var list = Connection.LoadRecords<T>();
-            lb.DataSource = null;
-            lb.DataSource = list;
-            lb.DisplayMember = displayMember;
+            dynamic table = Connection.LoadRecords<T>();  // Since the type is only known at runtime, it need to be a dynamic variable
+
+            foreach (var row in table)
+            {
+                string[] subs = row.FullString.Split(' ');
+                var listViewItem = new ListViewItem(subs);
+                lv.Items.Add(listViewItem);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SaleForm form = new SaleForm(listBox1.SelectedIndex, true);
-            form.ShowDialog();
+            //SaleForm form = new SaleForm(listBox1.SelectedIndex, true);
+            //form.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             SaleForm form = new SaleForm(null, false);
             form.ShowDialog();
 
-            refresh<SaleModel>(listBox1, "FullSale");
+            //refresh<SaleModel>(listBox1, "FullSale");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -66,8 +74,6 @@ namespace project
         {
             InventoryForm form = new InventoryForm();
             form.ShowDialog();
-
-            refresh<InventoryModel>(listBox2, "FullInventory");
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -84,8 +90,6 @@ namespace project
         {
             CustomerFom form = new CustomerFom();
             form.ShowDialog();
-
-            refresh<CustomerModel>(listBox2, "FullCustomer");
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -102,8 +106,6 @@ namespace project
         {
             EmployeeForm form = new EmployeeForm();
             form.ShowDialog();
-
-            refresh<EmployeeModel>(listBox2, "FullEmployee");
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -120,8 +122,6 @@ namespace project
         {
             SupplierForm form = new SupplierForm();
             form.ShowDialog();
-
-            refresh<SupplierModel>(listBox2, "FullSupplier");
         }
     }
 }
