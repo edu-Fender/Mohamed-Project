@@ -36,5 +36,5 @@ C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.csproj.GenerateRes
 C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.csproj.CoreCompileInputs.cache
 C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.csproj.CopyComplete
 C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.SupplierForm.resources
-C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.CustomerFom.resources
 C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.SaleForm.resources
+C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.CustomerForm.resources

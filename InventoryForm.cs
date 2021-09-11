@@ -6,13 +6,40 @@ namespace project
 {
     public partial class InventoryForm : Form
     {
-        public int refresh { get; private set; }
+        private int? selectedIndex;
+        private string senderButton;
 
-        public InventoryForm()
+        public InventoryForm(int? selectedIndex, string senderButton)
         {
             InitializeComponent();
 
-            comboBox1.Text = comboBox1.Items[0].ToString();
+            this.Select();
+            this.selectedIndex = selectedIndex;
+            this.senderButton = senderButton;
+
+            if (senderButton == "view" || senderButton == "update")
+            {
+                List<InventoryModel> inventory = Connection.LoadRecords<InventoryModel>();
+
+                textBox1.Text = inventory[selectedIndex.Value].Type;
+                textBox2.Text = inventory[selectedIndex.Value].Quantity;
+                textBox3.Text = inventory[selectedIndex.Value].Color;
+                textBox4.Text = inventory[selectedIndex.Value].Dimension;
+                textBox5.Text = inventory[selectedIndex.Value].StartPrice;
+                textBox6.Text = inventory[selectedIndex.Value].CurrentPrice;
+                textBox7.Text = inventory[selectedIndex.Value].Condition;
+                textBox8.Text = inventory[selectedIndex.Value].Description;
+                textBox9.Text = inventory[selectedIndex.Value].Warranty;
+
+                if (senderButton == "view")
+                {
+                    button1.Enabled = false;
+                    foreach (TextBox ctrl in panel1.Controls)
+                    {
+                        ctrl.ReadOnly = true;
+                    }
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -28,9 +55,9 @@ namespace project
 
             try  // Check if the fields that must be integers are intergers
             {
-                int.Parse(textBox1.Text);
-                int.Parse(textBox4.Text);
+                int.Parse(textBox2.Text);
                 int.Parse(textBox5.Text);
+                int.Parse(textBox6.Text);
             }
             catch
             {
@@ -40,22 +67,40 @@ namespace project
 
             InventoryModel inventory = new InventoryModel
             {
-                Type = comboBox1.Text,
-                Quantity = textBox1.Text,
-                Color = textBox2.Text,
-                Dimension = textBox3.Text,
-                StartPrice = textBox4.Text,
-                CurrentPrice = textBox5.Text,
-                Condition = textBox6.Text,
-                Description = textBox7.Text,
-                Warranty = textBox8.Text
+                Type = textBox1.Text,
+                Quantity = textBox2.Text,
+                Color = textBox3.Text,
+                Dimension = textBox4.Text,
+                StartPrice = textBox5.Text,
+                CurrentPrice = textBox6.Text,
+                Condition = textBox7.Text,
+                Description = textBox8.Text,
+                Warranty = textBox9.Text
             };
 
-            Connection.AddRecord(inventory);
+            switch (senderButton)  // will find out the type of the list automatically 
+            {
+                case "view":
+                    break;
+                case "update":
+                    Connection.UpdateRecord(inventory, selectedIndex.Value);
+                    break;
+                case "add":
+                    Connection.AddRecord(inventory);
+                    break;
+            }
+
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (senderButton == "view")
+            {
+                this.Close();
+                return;
+            }
+
             foreach (Control ctrl in panel1.Controls)  // Checks if weather of the textbox were filled
             {
                 if (String.IsNullOrEmpty(ctrl.Text) == false)
@@ -65,6 +110,7 @@ namespace project
                     if (mb == DialogResult.Yes)
                     {
                         this.Close();
+                        return;
                     }
                     else if (mb == DialogResult.No)
                     {

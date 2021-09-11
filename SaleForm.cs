@@ -1,49 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace project
 {
     public partial class SaleForm : Form
     {
-        private int? _selectedIndex;
+        private int? selectedIndex;
+        private string senderButton;
 
-        public SaleForm(int? selectedIndex, bool flag)
+        public SaleForm(int? selectedIndex, string senderButton)
         {
             InitializeComponent();
 
-            if (flag == true)
-            {
-                button1.Enabled = false;
+            this.Select();
+            this.selectedIndex = selectedIndex;
+            this.senderButton = senderButton;
 
-                foreach (TextBox cntrl in panel1.Controls)
-                {
-                    cntrl.ReadOnly = true;
-                }
-            }
-
-            if (selectedIndex != null)  // If selectedIndex not null, if any item was selected on the TextBox of the MainForm when this form was called
+            if (senderButton == "view" || senderButton == "update")
             {
-                _selectedIndex = selectedIndex;
                 List<SaleModel> sale = Connection.LoadRecords<SaleModel>();
-                                
-                textBox1.Text = sale[selectedIndex.Value].ItemId;
-                textBox2.Text = sale[selectedIndex.Value].CustomerId;
-                textBox3.Text = sale[selectedIndex.Value].EmployeeId;
+
                 textBox4.Text = sale[selectedIndex.Value].SaleDate;
                 textBox5.Text = sale[selectedIndex.Value].SaleAmount;
                 textBox6.Text = sale[selectedIndex.Value].SaleQty;
                 textBox7.Text = sale[selectedIndex.Value].DeliveryAmount;
                 textBox8.Text = sale[selectedIndex.Value].PaymentMethod;
 
-                button1.Enabled = false;
+                if (senderButton == "view")
+                {
+                    button1.Enabled = false;
+                    foreach (TextBox ctrl in panel1.Controls)
+                    {
+                        ctrl.ReadOnly = true;
+                    }
+                }
             }  
+        }
+
+        private void refreshComboBox<T>(List<T> list, ComboBox cb)
+        {
+            foreach (dynamic table in list)
+            {
+                Console.WriteLine(table.Id);
+                cb.Items.Add(table.Id);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,21 +86,31 @@ namespace project
                 PaymentMethod = textBox8.Text,
             };
 
-            if (_selectedIndex == null)
-            {
-                Connection.AddRecord(sale);
-            }          
-            else if (_selectedIndex != null)
-            {
-                Connection.UpdateRecord(sale, _selectedIndex.Value);
-            }
-            this.Close();
             
+            switch (senderButton)  // will find out the type of the list automatically 
+            {
+                case "view":
+                    break;
+                case "update":
+                    Connection.UpdateRecord(sale, selectedIndex.Value);
+                    break;
+                case "add":
+                    Connection.AddRecord(sale);
+                    break;
+            }     
+            
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in panel1.Controls)  // Checks if weather of the textbox were filled
+            if (senderButton == "view")
+            {
+                this.Close();
+                return;
+            }
+
+            foreach (Control ctrl in panel1.Controls)  // Checks if any of the textboxes was filled
             {
                 if (String.IsNullOrEmpty(ctrl.Text) == false)
                 {
@@ -108,6 +119,7 @@ namespace project
                     if (mb == DialogResult.Yes)
                     {
                         this.Close();
+                        return;
                     }
                     else if (mb == DialogResult.No)
                     {

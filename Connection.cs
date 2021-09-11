@@ -20,7 +20,7 @@ namespace project
                 switch (typeof(T).Name)  // will find out the type of the list automatically 
                 {
                     case "CustomerModel":
-                        connect.Execute("insert into tblCustomer (CustomerId, FirstName, LastName, Email, Number, Address) values (@CustomerId, @FirstName, @LastName, @Email, @Number, @Address)", list);
+                        connect.Execute("insert into tblCustomers (CustomerId, FirstName, LastName, Email, Number, Address) values (@CustomerId, @FirstName, @LastName, @Email, @Number, @Address)", list);
                         break;
                     case "EmployeeModel":
                         connect.Execute("insert into tblEmployees (Type, FirstName, LastName, DateOfBirth, Number, Email, StartDate, Salary, Comission, Password) values (@Type, @FirstName, @LastName, @DateOfBirth, @Number, @Email, @StartDate, @Salary, @Comission, @Password)", list);
@@ -45,7 +45,7 @@ namespace project
                 switch (typeof(T).Name)
                 {
                     case "CustomerModel":
-                        connect.Execute($"update tblCustomer set CustomerId = @CustomerId, FirstName = @FirstName, LastName = @LastName, Email = @Email, Number = @Number, Address= @Address  where Id = {selectedIndex + 1}", list);
+                        connect.Execute($"update tblCustomers set CustomerId = @CustomerId, FirstName = @FirstName, LastName = @LastName, Email = @Email, Number = @Number, Address= @Address  where Id = {selectedIndex + 1}", list);
                         break;
                     case "EmployeeModel":
                         connect.Execute($"update tblEmployees set Type = @update, FirstName = @FirstName, LastName = @LastName, DateOfBirth = @DateOfBirth, Number = @Number, Email = @Email, StartDate = @StartDate, Salary = @Salary, Comission = Comission, Password = @Password  where Id = {selectedIndex + 1}", list);

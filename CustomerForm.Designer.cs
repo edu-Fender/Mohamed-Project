@@ -1,7 +1,7 @@
 ﻿
 namespace project
 {
-    partial class CustomerFom
+    partial class CustomerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -68,6 +68,7 @@ namespace project
             this.button2.TabIndex = 74;
             this.button2.Text = "QUIT";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -76,7 +77,7 @@ namespace project
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 55);
             this.button1.TabIndex = 73;
-            this.button1.Text = "ADD";
+            this.button1.Text = "SAVE";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -84,11 +85,11 @@ namespace project
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label10.Location = new System.Drawing.Point(142, 50);
+            this.label10.Location = new System.Drawing.Point(172, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(240, 31);
+            this.label10.Size = new System.Drawing.Size(170, 31);
             this.label10.TabIndex = 64;
-            this.label10.Text = "NEW CUSTOMER";
+            this.label10.Text = "CUSTOMER";
             // 
             // label4
             // 
@@ -211,12 +212,13 @@ namespace project
             this.panel3.Size = new System.Drawing.Size(515, 197);
             this.panel3.TabIndex = 77;
             // 
-            // CustomerFom
+            // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(510, 591);
+            this.ControlBox = false;
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -227,7 +229,7 @@ namespace project
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.MaximizeBox = false;
-            this.Name = "CustomerFom";
+            this.Name = "CustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Customers";
             this.panel1.ResumeLayout(false);

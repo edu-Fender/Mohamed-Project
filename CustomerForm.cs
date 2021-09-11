@@ -10,17 +10,45 @@ using System.Windows.Forms;
 
 namespace project
 {
-    public partial class CustomerFom : Form
+    public partial class CustomerForm : Form
     {
+        private int? selectedIndex;
+        private string senderButton;
         public int refresh { get; private set; }
 
-        public CustomerFom()
+        public CustomerForm(int? selectedIndex, string senderButton)
         {
             InitializeComponent();
+
+            this.Select();
+            this.selectedIndex = selectedIndex;
+            this.senderButton = senderButton;
+
+            if (senderButton == "view" || senderButton == "update")
+            {
+                List<CustomerModel> customer = Connection.LoadRecords<CustomerModel>();
+
+                textBox1.Text = customer[selectedIndex.Value].CustomerId;
+                textBox2.Text = customer[selectedIndex.Value].FirstName;
+                textBox3.Text = customer[selectedIndex.Value].LastName;
+                textBox4.Text = customer[selectedIndex.Value].Email;
+                textBox5.Text = customer[selectedIndex.Value].Number;
+                textBox6.Text = customer[selectedIndex.Value].Address;
+
+                if (senderButton == "view")
+                {
+                    button1.Enabled = false;  // Disable "SAVE" button
+                    foreach (TextBox ctrl in panel1.Controls)  // Makes everything read-only
+                    {
+                        ctrl.ReadOnly = true;
+                    }
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             foreach (Control ctrl in panel1.Controls)  //Check if some field is null
             {
                 if (String.IsNullOrEmpty(ctrl.Text))
@@ -50,11 +78,29 @@ namespace project
                 Address = textBox6.Text,
             };
 
-            Connection.AddRecord(customer);
+            switch (senderButton)  // will find out the type of the list automatically 
+            {
+                case "view":
+                    break;
+                case "update":
+                    Connection.UpdateRecord(customer, selectedIndex.Value);
+                    break;
+                case "add":
+                    Connection.AddRecord(customer);
+                    break;
+            }
+
+            this.Close();
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in panel1.Controls)  // Checks if weather of the textbox were filled
+            if (senderButton == "view")
+            {
+                this.Close();
+                return;
+            }
+
+            foreach (Control ctrl in panel1.Controls)  // Checks if any of the textboxes was filled
             {
                 if (String.IsNullOrEmpty(ctrl.Text) == false)
                 {
@@ -63,6 +109,7 @@ namespace project
                     if (mb == DialogResult.Yes)
                     {
                         this.Close();
+                        return;
                     }
                     else if (mb == DialogResult.No)
                     {

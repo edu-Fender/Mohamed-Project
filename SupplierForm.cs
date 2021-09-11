@@ -6,13 +6,38 @@ namespace project
 {
     public partial class SupplierForm : Form
     {
-        public int refresh { get; private set; }
+        private int? selectedIndex;
+        private string senderButton;
 
-        public SupplierForm()
+        public SupplierForm(int? selectedIndex, string senderButton)
         {
             InitializeComponent();
 
-            comboBox1.Text = comboBox1.Items[0].ToString();  //Set default value of comboBox1
+            this.Select();
+            this.selectedIndex = selectedIndex;
+            this.senderButton = senderButton;
+
+            if (senderButton == "view" || senderButton == "update")
+            {
+                List<SupplierModel> supplier = Connection.LoadRecords<SupplierModel>();
+
+                textBox1.Text = supplier[selectedIndex.Value].SupplierId;
+                textBox2.Text = supplier[selectedIndex.Value].Name;
+                textBox3.Text = supplier[selectedIndex.Value].Type;
+                textBox4.Text = supplier[selectedIndex.Value].Number;
+                textBox5.Text = supplier[selectedIndex.Value].Email;
+                textBox6.Text = supplier[selectedIndex.Value].Address;
+
+
+                if (senderButton == "view")
+                {
+                    button1.Enabled = false;
+                    foreach (TextBox ctrl in panel1.Controls)  // As the variable is dynamic, I can set the ReadOnly attribute without showing the compiler any specific type
+                    {
+                        ctrl.ReadOnly = true;
+                    }
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,17 +65,34 @@ namespace project
             {
                 SupplierId = textBox1.Text,
                 Name = textBox2.Text,
-                Type = comboBox1.Text,
-                Number = textBox3.Text,
-                Email = textBox4.Text,
-                Address = textBox5.Text,
+                Number = textBox4.Text,
+                Email = textBox5.Text,
+                Address = textBox6.Text,
             };
 
-            Connection.AddRecord(supplier);
+            switch (senderButton)  // will find out the type of the list automatically 
+            {
+                case "view":
+                    break;
+                case "update":
+                    Connection.UpdateRecord(supplier, selectedIndex.Value);
+                    break;
+                case "add":
+                    Connection.AddRecord(supplier);
+                    break;
+            }
+
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (senderButton == "view")
+            {
+                this.Close();
+                return;
+            }
+
             foreach (Control ctrl in panel1.Controls)  // Checks if weather of the textbox were filled
             {
                 if (String.IsNullOrEmpty(ctrl.Text) == false)
@@ -60,6 +102,7 @@ namespace project
                     if (mb == DialogResult.Yes)
                     {
                         this.Close();
+                        return;
                     }
                     else if (mb == DialogResult.No)
                     {

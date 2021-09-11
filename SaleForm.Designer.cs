@@ -44,14 +44,14 @@ namespace project
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -103,7 +103,7 @@ namespace project
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label10.Location = new System.Drawing.Point(225, 50);
+            this.label10.Location = new System.Drawing.Point(228, 50);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 31);
             this.label10.TabIndex = 79;
@@ -147,14 +147,14 @@ namespace project
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Location = new System.Drawing.Point(148, 115);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 288);
@@ -190,31 +190,10 @@ namespace project
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(0, 113);
+            this.textBox4.Location = new System.Drawing.Point(0, 110);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(250, 20);
             this.textBox4.TabIndex = 65;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 62;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(0, 35);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 20);
-            this.textBox2.TabIndex = 63;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(0, 74);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 20);
-            this.textBox3.TabIndex = 64;
             // 
             // label5
             // 
@@ -262,12 +241,34 @@ namespace project
             this.panel4.Size = new System.Drawing.Size(270, 2);
             this.panel4.TabIndex = 88;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 71;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(0, 36);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(250, 20);
+            this.textBox2.TabIndex = 72;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(0, 71);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(250, 20);
+            this.textBox3.TabIndex = 73;
+            // 
             // SaleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(516, 657);
+            this.ControlBox = false;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label12);
@@ -304,9 +305,6 @@ namespace project
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
@@ -316,5 +314,8 @@ namespace project
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

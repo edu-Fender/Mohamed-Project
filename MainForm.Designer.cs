@@ -92,6 +92,7 @@ namespace project
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -112,7 +113,6 @@ namespace project
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
             this.Suppliers.SuspendLayout();
@@ -198,7 +198,7 @@ namespace project
             this.columnHeader45});
             this.listView5.FullRowSelect = true;
             this.listView5.HideSelection = false;
-            this.listView5.Location = new System.Drawing.Point(1, 6);
+            this.listView5.Location = new System.Drawing.Point(1, 2);
             this.listView5.Name = "listView5";
             this.listView5.Size = new System.Drawing.Size(792, 343);
             this.listView5.TabIndex = 15;
@@ -245,8 +245,9 @@ namespace project
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(255, 70);
             this.button13.TabIndex = 9;
-            this.button13.Text = "VIEW/UPDATE RECORD";
+            this.button13.Text = "VIEW RECORD";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -254,8 +255,9 @@ namespace project
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(255, 70);
             this.button14.TabIndex = 10;
-            this.button14.Text = "DELETE RECORD";
+            this.button14.Text = "UPDATE RECORD";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // panel5
             // 
@@ -274,6 +276,7 @@ namespace project
             this.button15.TabIndex = 11;
             this.button15.Text = "ADD NEW RECORD";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // Employees
             // 
@@ -369,8 +372,9 @@ namespace project
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(255, 70);
             this.button10.TabIndex = 9;
-            this.button10.Text = "VIEW/UPDATE RECORD";
+            this.button10.Text = "VIEW RECORD";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -378,8 +382,9 @@ namespace project
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(255, 70);
             this.button11.TabIndex = 10;
-            this.button11.Text = "DELETE RECORD";
+            this.button11.Text = "UPDATE RECORD";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // panel4
             // 
@@ -398,6 +403,7 @@ namespace project
             this.button12.TabIndex = 11;
             this.button12.Text = "ADD NEW RECORD";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Costumers
             // 
@@ -472,8 +478,9 @@ namespace project
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(255, 70);
             this.button7.TabIndex = 9;
-            this.button7.Text = "VIEW/UPDATE RECORD";
+            this.button7.Text = "VIEW RECORD";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -481,8 +488,9 @@ namespace project
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(255, 70);
             this.button8.TabIndex = 10;
-            this.button8.Text = "DELETE RECORD";
+            this.button8.Text = "UPDATE RECORD";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel3
             // 
@@ -501,6 +509,7 @@ namespace project
             this.button9.TabIndex = 11;
             this.button9.Text = "ADD NEW RECORD";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Inventory
             // 
@@ -583,14 +592,20 @@ namespace project
             this.columnHeader18.Text = "Description";
             this.columnHeader18.Width = 120;
             // 
+            // columnHeader19
+            // 
+            this.columnHeader19.Text = "Warranty";
+            this.columnHeader19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(2, 349);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(255, 70);
             this.button4.TabIndex = 9;
-            this.button4.Text = "VIEW/UPDATE RECORD";
+            this.button4.Text = "VIEW RECORD";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -598,8 +613,9 @@ namespace project
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(255, 70);
             this.button5.TabIndex = 10;
-            this.button5.Text = "DELETE RECORD";
+            this.button5.Text = "UPDATE RECORD";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel2
             // 
@@ -618,6 +634,7 @@ namespace project
             this.button6.TabIndex = 11;
             this.button6.Text = "ADD NEW RECORD";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Sales
             // 
@@ -751,11 +768,6 @@ namespace project
             this.tabControl1.Size = new System.Drawing.Size(800, 447);
             this.tabControl1.TabIndex = 8;
             // 
-            // columnHeader19
-            // 
-            this.columnHeader19.Text = "Warranty";
-            this.columnHeader19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -814,7 +826,6 @@ namespace project
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -863,5 +874,6 @@ namespace project
         private System.Windows.Forms.ColumnHeader columnHeader36;
         private System.Windows.Forms.ColumnHeader columnHeader37;
         private System.Windows.Forms.ColumnHeader columnHeader19;
+        public System.Windows.Forms.ListView listView1;
     }
 }

@@ -70,13 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerModel.cs" />
-    <Compile Include="SaleModel.cs" />
-    <Compile Include="CustomerFom.cs">
+    <Compile Include="Models.cs" />
+    <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerFom.Designer.cs">
-      <DependentUpon>CustomerFom.cs</DependentUpon>
+    <Compile Include="CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="EmployeeForm.cs">
       <SubType>Form</SubType>
@@ -84,8 +83,6 @@
     <Compile Include="EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeModel.cs" />
-    <Compile Include="InventoryModel.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="InventoryForm.cs">
       <SubType>Form</SubType>
@@ -113,9 +110,8 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SupplierModel.cs" />
-    <EmbeddedResource Include="CustomerFom.resx">
-      <DependentUpon>CustomerFom.cs</DependentUpon>
+    <EmbeddedResource Include="CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>

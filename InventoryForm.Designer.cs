@@ -39,16 +39,16 @@ namespace project
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -70,11 +70,11 @@ namespace project
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
-            this.label10.Location = new System.Drawing.Point(148, 50);
+            this.label10.Location = new System.Drawing.Point(175, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(239, 31);
+            this.label10.Size = new System.Drawing.Size(174, 31);
             this.label10.TabIndex = 39;
-            this.label10.Text = "ADD INVENTORY";
+            this.label10.Text = "INVENTORY";
             // 
             // label8
             // 
@@ -148,93 +148,86 @@ namespace project
             this.label1.TabIndex = 26;
             this.label1.Text = "Quantity:";
             // 
-            // textBox2
+            // textBox3
             // 
-            this.textBox2.Location = new System.Drawing.Point(0, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 20);
-            this.textBox2.TabIndex = 64;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(0, 184);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(250, 20);
-            this.textBox5.TabIndex = 67;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(0, 149);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(250, 20);
-            this.textBox4.TabIndex = 66;
+            this.textBox3.Location = new System.Drawing.Point(0, 71);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(250, 20);
+            this.textBox3.TabIndex = 64;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(0, 223);
+            this.textBox6.Location = new System.Drawing.Point(0, 184);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(250, 20);
-            this.textBox6.TabIndex = 68;
+            this.textBox6.TabIndex = 67;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(0, 149);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(250, 20);
+            this.textBox5.TabIndex = 66;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(0, 261);
-            this.textBox7.Multiline = true;
+            this.textBox7.Location = new System.Drawing.Point(0, 223);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(250, 40);
-            this.textBox7.TabIndex = 69;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 63;
+            this.textBox7.Size = new System.Drawing.Size(250, 20);
+            this.textBox7.TabIndex = 68;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(0, 316);
+            this.textBox8.Location = new System.Drawing.Point(0, 261);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(250, 40);
-            this.textBox8.TabIndex = 70;
+            this.textBox8.TabIndex = 69;
             // 
-            // textBox3
+            // textBox2
             // 
-            this.textBox3.Location = new System.Drawing.Point(0, 110);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 20);
-            this.textBox3.TabIndex = 65;
+            this.textBox2.Location = new System.Drawing.Point(0, 36);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(250, 20);
+            this.textBox2.TabIndex = 63;
             // 
-            // comboBox1
+            // textBox9
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Louges",
-            "Chairs",
-            "Tables",
-            "Mirros",
-            "Vases"});
-            this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(250, 21);
-            this.comboBox1.TabIndex = 62;
+            this.textBox9.Location = new System.Drawing.Point(0, 316);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(250, 40);
+            this.textBox9.TabIndex = 70;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(0, 110);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(250, 20);
+            this.textBox4.TabIndex = 65;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox9);
             this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Location = new System.Drawing.Point(137, 115);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 359);
             this.panel1.TabIndex = 61;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 71;
             // 
             // panel3
             // 
@@ -262,7 +255,7 @@ namespace project
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 55);
             this.button1.TabIndex = 73;
-            this.button1.Text = "ADD";
+            this.button1.Text = "SAVE";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -283,6 +276,7 @@ namespace project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(514, 738);
+            this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -320,20 +314,20 @@ namespace project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
