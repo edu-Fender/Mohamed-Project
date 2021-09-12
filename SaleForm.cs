@@ -9,9 +9,13 @@ namespace project
         private int? selectedIndex;
         private string senderButton;
 
-        public SaleForm(int? selectedIndex, string senderButton)
+        public SaleForm(int? selectedIndex, string senderButton, List<InventoryModel> inventory, List<CustomerModel> customer, List<EmployeeModel> employee)
         {
             InitializeComponent();
+
+            refreshComboBox(inventory);
+            refreshComboBox(customer);
+            refreshComboBox(employee);
 
             this.Select();
             this.selectedIndex = selectedIndex;
@@ -25,7 +29,8 @@ namespace project
                 textBox5.Text = sale[selectedIndex.Value].SaleAmount;
                 textBox6.Text = sale[selectedIndex.Value].SaleQty;
                 textBox7.Text = sale[selectedIndex.Value].DeliveryAmount;
-                textBox8.Text = sale[selectedIndex.Value].PaymentMethod;
+                textBox8.Text = sale[selectedIndex.Value].TotalSaleAmount;
+                textBox9.Text = sale[selectedIndex.Value].PaymentMethod;
 
                 if (senderButton == "view")
                 {
@@ -38,12 +43,27 @@ namespace project
             }  
         }
 
-        private void refreshComboBox<T>(List<T> list, ComboBox cb)
+        private void refreshComboBox<T>(List<T> list)
         {
+            string str;
+
             foreach (dynamic table in list)
             {
-                Console.WriteLine(table.Id);
-                cb.Items.Add(table.Id);
+                switch (typeof(T).Name)
+                {
+                    case "InventoryModel":
+                        str = $"{table.Id}.    {table.Type} {table.Colour}";
+                        comboBox1.Items.Add(str);
+                        break;
+                    case "CustomerModel":
+                        str = $"{table.Id}.    {table.FirstName} {table.LastName}";
+                        comboBox2.Items.Add(str);
+                        break;
+                    case "EmployeeModel":
+                        str = $"{table.Id}.    {table.FirstName} {table.LastName}";
+                        comboBox3.Items.Add(str);
+                        break;
+                }
             }
         }
 
@@ -60,12 +80,10 @@ namespace project
 
             try  // Check if the fields that must be integers are intergers
             {
-                int.Parse(textBox1.Text);
-                int.Parse(textBox2.Text);
-                int.Parse(textBox3.Text);
                 int.Parse(textBox5.Text);
                 int.Parse(textBox6.Text);
                 int.Parse(textBox7.Text);
+                int.Parse(textBox8.Text);
 
             }
             catch
@@ -76,14 +94,15 @@ namespace project
 
             SaleModel sale = new SaleModel
             {
-                ItemId = textBox1.Text,
-                CustomerId = textBox2.Text,
-                EmployeeId = textBox3.Text,
+                ItemId = comboBox1.GetItemText(comboBox1.SelectedItem),  // Use substring to grab only the first char, with is the Id
+                CustomerId = comboBox3.GetItemText(comboBox2.SelectedItem),
+                EmployeeId = comboBox3.GetItemText(comboBox3.SelectedItem),
                 SaleDate = textBox4.Text,
                 SaleAmount = textBox5.Text,
                 SaleQty = textBox6.Text,
                 DeliveryAmount = textBox7.Text,
-                PaymentMethod = textBox8.Text,
+                TotalSaleAmount = textBox8.Text,
+                PaymentMethod = textBox9.Text,
             };
 
             

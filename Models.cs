@@ -10,6 +10,7 @@
         public string SaleAmount { get; set; }
         public string SaleQty { get; set; }
         public string DeliveryAmount { get; set; }
+        public string TotalSaleAmount { get; set; }
         public string PaymentMethod { get; set; }
         public string FullString
         {
@@ -23,12 +24,13 @@
     public class InventoryModel
     {
         public string Id { get; private set; }
+        public string SupplierId { get; set; }
         public string Type { get; set; }
         public string Quantity { get; set; }
-        public string Color { get; set; }
-        public string Dimension { get; set; }
-        public string StartPrice { get; set; }
-        public string CurrentPrice { get; set; }
+        public string Colour { get; set; }
+        public string Dimensions { get; set; }
+        public string SalePrice { get; set; }
+        public string CostPrice { get; set; }
         public string Condition { get; set; }
         public string Description { get; set; }
         public string Warranty { get; set; }
@@ -36,7 +38,7 @@
         {
             get
             {
-                return $"{Id} {Type} {Quantity} {Color} {Dimension} {StartPrice} {CurrentPrice} {Condition} {Description} {Warranty}";
+                return $"{Id} {SupplierId} {Type} {Quantity} {Colour} {Dimensions} {SalePrice} {CostPrice} {Condition} {Description} {Warranty}";
             }
         }
     }
@@ -44,7 +46,6 @@
     public class CustomerModel
     {
         public string Id { get; private set; }
-        public string CustomerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
@@ -54,7 +55,7 @@
         {
             get
             {
-                return $"{Id} {CustomerId} {FirstName} {LastName} {Email} {Number} {Address}";
+                return $"{Id} {FirstName} {LastName} {Email} {Number} {Address}";
             }
         }
     }
@@ -65,6 +66,7 @@
         public string Type { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Gender { get; set; }
         public string DateOfBirth { get; set; }
         public string Number { get; set; }
         public string Email { get; set; }
@@ -76,7 +78,7 @@
         {
             get
             {
-                return $"{Id} {Type} {FirstName} {LastName} {DateOfBirth} {Number} {Email} {StartDate} {Salary} {Comission} {Password}";
+                return $"{Id} {Type} {FirstName} {LastName} {Gender} {DateOfBirth} {Number} {Email} {StartDate} {Salary} {Comission} {Password}";
             }
         }
     }
@@ -84,7 +86,6 @@
     public class SupplierModel
     {
         public string Id { get; private set; }
-        public string SupplierId { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
         public string Number { get; set; }
@@ -94,7 +95,7 @@
         {
             get
             {
-                return $"{Id} {SupplierId} {Name} {Type} {Number} {Email} {Address}";
+                return $"{Id} {Name} {Type} {Number} {Email} {Address}";
             }
         }
     }

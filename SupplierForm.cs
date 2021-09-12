@@ -21,12 +21,11 @@ namespace project
             {
                 List<SupplierModel> supplier = Connection.LoadRecords<SupplierModel>();
 
-                textBox1.Text = supplier[selectedIndex.Value].SupplierId;
-                textBox2.Text = supplier[selectedIndex.Value].Name;
-                textBox3.Text = supplier[selectedIndex.Value].Type;
-                textBox4.Text = supplier[selectedIndex.Value].Number;
-                textBox5.Text = supplier[selectedIndex.Value].Email;
-                textBox6.Text = supplier[selectedIndex.Value].Address;
+                textBox1.Text = supplier[selectedIndex.Value].Name;
+                textBox2.Text = supplier[selectedIndex.Value].Type;
+                textBox3.Text = supplier[selectedIndex.Value].Number;
+                textBox4.Text = supplier[selectedIndex.Value].Email;
+                textBox5.Text = supplier[selectedIndex.Value].Address;
 
 
                 if (senderButton == "view")
@@ -51,23 +50,13 @@ namespace project
                 }
             }
 
-            try  // Check if the fields that must be integers are intergers
-            {
-                int.Parse(textBox1.Text);
-            }
-            catch
-            {
-                MessageBox.Show("ERROR: FIELD 'ID' MUST BE AN INTEGER");
-                return;
-            }
-
             SupplierModel supplier = new SupplierModel
             {
-                SupplierId = textBox1.Text,
-                Name = textBox2.Text,
-                Number = textBox4.Text,
-                Email = textBox5.Text,
-                Address = textBox6.Text,
+                Name = textBox1.Text,
+                Type = textBox2.Text,
+                Number = textBox3.Text,
+                Email = textBox4.Text,
+                Address = textBox5.Text,
             };
 
             switch (senderButton)  // will find out the type of the list automatically 

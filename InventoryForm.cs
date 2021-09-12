@@ -9,9 +9,15 @@ namespace project
         private int? selectedIndex;
         private string senderButton;
 
-        public InventoryForm(int? selectedIndex, string senderButton)
+        public InventoryForm(int? selectedIndex, string senderButton, List<SupplierModel> supplier)
         {
             InitializeComponent();
+
+            foreach (dynamic table in supplier)  // Show the information from each supplier on the ComboBox
+            {
+                string str = $"{table.Id}.    {table.Name} {table.Email}";
+                comboBox1.Items.Add(str);
+            }
 
             this.Select();
             this.selectedIndex = selectedIndex;
@@ -21,12 +27,13 @@ namespace project
             {
                 List<InventoryModel> inventory = Connection.LoadRecords<InventoryModel>();
 
+                comboBox1.Text = inventory[selectedIndex.Value].SupplierId;
                 textBox1.Text = inventory[selectedIndex.Value].Type;
                 textBox2.Text = inventory[selectedIndex.Value].Quantity;
-                textBox3.Text = inventory[selectedIndex.Value].Color;
-                textBox4.Text = inventory[selectedIndex.Value].Dimension;
-                textBox5.Text = inventory[selectedIndex.Value].StartPrice;
-                textBox6.Text = inventory[selectedIndex.Value].CurrentPrice;
+                textBox3.Text = inventory[selectedIndex.Value].Colour;
+                textBox4.Text = inventory[selectedIndex.Value].Dimensions;
+                textBox5.Text = inventory[selectedIndex.Value].SalePrice;
+                textBox6.Text = inventory[selectedIndex.Value].CostPrice;
                 textBox7.Text = inventory[selectedIndex.Value].Condition;
                 textBox8.Text = inventory[selectedIndex.Value].Description;
                 textBox9.Text = inventory[selectedIndex.Value].Warranty;
@@ -67,12 +74,13 @@ namespace project
 
             InventoryModel inventory = new InventoryModel
             {
+                SupplierId = comboBox1.GetItemText(comboBox1.SelectedItem),  // Why it only takes the first char??
                 Type = textBox1.Text,
                 Quantity = textBox2.Text,
-                Color = textBox3.Text,
-                Dimension = textBox4.Text,
-                StartPrice = textBox5.Text,
-                CurrentPrice = textBox6.Text,
+                Colour = textBox3.Text,
+                Dimensions = textBox4.Text,
+                SalePrice = textBox5.Text,
+                CostPrice = textBox6.Text,
                 Condition = textBox7.Text,
                 Description = textBox8.Text,
                 Warranty = textBox9.Text

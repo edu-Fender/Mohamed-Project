@@ -28,12 +28,11 @@ namespace project
             {
                 List<CustomerModel> customer = Connection.LoadRecords<CustomerModel>();
 
-                textBox1.Text = customer[selectedIndex.Value].CustomerId;
-                textBox2.Text = customer[selectedIndex.Value].FirstName;
-                textBox3.Text = customer[selectedIndex.Value].LastName;
-                textBox4.Text = customer[selectedIndex.Value].Email;
-                textBox5.Text = customer[selectedIndex.Value].Number;
-                textBox6.Text = customer[selectedIndex.Value].Address;
+                textBox1.Text = customer[selectedIndex.Value].FirstName;
+                textBox2.Text = customer[selectedIndex.Value].LastName;
+                textBox3.Text = customer[selectedIndex.Value].Email;
+                textBox4.Text = customer[selectedIndex.Value].Number;
+                textBox5.Text = customer[selectedIndex.Value].Address;
 
                 if (senderButton == "view")
                 {
@@ -70,12 +69,11 @@ namespace project
 
             CustomerModel customer = new CustomerModel
             {
-                CustomerId = textBox1.Text,
-                FirstName = textBox2.Text,
-                LastName = textBox3.Text,
-                Email = textBox4.Text,
-                Number = textBox5.Text,
-                Address = textBox6.Text,
+                FirstName = textBox1.Text,
+                LastName = textBox2.Text,
+                Email = textBox3.Text,
+                Number = textBox4.Text,
+                Address = textBox5.Text,
             };
 
             switch (senderButton)  // will find out the type of the list automatically 

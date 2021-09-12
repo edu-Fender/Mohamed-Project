@@ -32,6 +32,7 @@ namespace project
             }
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             var inventory = Connection.LoadRecords<InventoryModel>();
@@ -41,18 +42,21 @@ namespace project
             if (listView1.SelectedItems.Count > 0)
             {
                 selectedIndex = listView1.Items.IndexOf(listView1.SelectedItems[0]);
-                SaleForm form = new SaleForm(selectedIndex, "view");
+                SaleForm form = new SaleForm(selectedIndex, "view", inventory, customer, employee);
                 form.ShowDialog();
             }
         }
 
-
         private void button2_Click(object sender, EventArgs e)
         {
+            var inventory = Connection.LoadRecords<InventoryModel>();
+            var customer = Connection.LoadRecords<CustomerModel>();
+            var employee = Connection.LoadRecords<EmployeeModel>();
+
             if (listView1.SelectedItems.Count > 0)
             {
                 selectedIndex = listView1.Items.IndexOf(listView1.SelectedItems[0]);
-                SaleForm form = new SaleForm(selectedIndex, "update");
+                SaleForm form = new SaleForm(selectedIndex, "update", inventory, customer, employee);
                 form.ShowDialog();
                 refresh<SaleModel>(listView1);
             }     
@@ -60,27 +64,41 @@ namespace project
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SaleForm form = new SaleForm(null, "add");
+            var inventory = Connection.LoadRecords<InventoryModel>();
+            var customer = Connection.LoadRecords<CustomerModel>();
+            var employee = Connection.LoadRecords<EmployeeModel>();
+
+            if (!inventory.Any() || !customer.Any() || !employee.Any())
+            {
+                MessageBox.Show("ERROR: TO CREATE A SALE, YOU FIRST NEED TO REGISTER AT LEAST ONE INVENTORY, ONE CUSTOMER, AND ONE EMPLOYEE.");
+                return;
+            }
+
+            SaleForm form = new SaleForm(null, "add", inventory, customer, employee);
             form.ShowDialog();
             refresh<SaleModel>(listView1);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            var employee = Connection.LoadRecords<SupplierModel>();
+
             if (listView2.SelectedItems.Count > 0)
             {
                 selectedIndex = listView2.Items.IndexOf(listView2.SelectedItems[0]);
-                InventoryForm form = new InventoryForm(selectedIndex, "view");
+                InventoryForm form = new InventoryForm(selectedIndex, "view", employee);
                 form.ShowDialog();
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            var employee = Connection.LoadRecords<SupplierModel>();
+
             if (listView2.SelectedItems.Count > 0)
             {
                 selectedIndex = listView2.Items.IndexOf(listView2.SelectedItems[0]);
-                InventoryForm form = new InventoryForm(selectedIndex, "update");
+                InventoryForm form = new InventoryForm(selectedIndex, "update", employee);
                 form.ShowDialog();
                 refresh<InventoryModel>(listView2);
             }
@@ -88,7 +106,15 @@ namespace project
 
         private void button6_Click(object sender, EventArgs e)
         {
-            InventoryForm form = new InventoryForm(null, "add");
+            var employee = Connection.LoadRecords<SupplierModel>();
+
+            if (!employee.Any())
+            {
+                MessageBox.Show("ERROR: TO ADD A ITEM TO INVENTORY, YOU FIRST NEED TO REGISTER AT LEAST ONE SUPPLIER.");
+                return;
+            }
+
+            InventoryForm form = new InventoryForm(null, "add", employee);
             form.ShowDialog();
             refresh<InventoryModel>(listView2);
         }

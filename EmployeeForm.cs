@@ -24,6 +24,7 @@ namespace project
                 textBox1.Text = employee[selectedIndex.Value].Type;
                 textBox2.Text = employee[selectedIndex.Value].FirstName;
                 textBox3.Text = employee[selectedIndex.Value].LastName;
+                textBox3_1.Text = employee[selectedIndex.Value].Gender;
                 textBox4.Text = employee[selectedIndex.Value].DateOfBirth;
                 textBox5.Text = employee[selectedIndex.Value].Number;
                 textBox6.Text = employee[selectedIndex.Value].Email;
@@ -70,6 +71,7 @@ namespace project
                 Type = textBox1.Text,
                 FirstName = textBox2.Text,
                 LastName = textBox3.Text,
+                Gender = textBox3_1.Text,
                 DateOfBirth = textBox4.Text,
                 Number = textBox5.Text,
                 Email = textBox6.Text,
@@ -90,6 +92,7 @@ namespace project
                     Connection.AddRecord(employee);
                     break;
             }
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
