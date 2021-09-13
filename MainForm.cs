@@ -21,12 +21,18 @@ namespace project
 
         private void refresh<T>(ListView lv)
         {
-            dynamic table = Connection.LoadRecords<T>();  // Since the type is only known at runtime, it need to be a dynamic variable
-            lv.Items.Clear();  // Cleans the ListView so the the new records wont append the current ones
+            dynamic list = Connection.LoadRecords<T>();  // Since the type is only known at runtime, it need to be a dynamic variable
+            lv.Items.Clear();  // Cleans the ListView so the the new records wont append to the current ones
 
-            foreach (var row in table)
+            foreach (var table in list)
             {
-                string[] subs = row.FullString.Split(' ');
+                string[] subs = table.FullString.Split(' ');  // Divide the string into substrings (which contain all the Database fields)       
+
+                if (typeof(T).Name == "EmployeeModel")  // Replace the Password chars with '*'
+                {
+                    subs[11] = new string('*', subs[11].Length);
+                }
+
                 var listViewItem = new ListViewItem(subs);
                 lv.Items.Add(listViewItem);
             }
@@ -68,7 +74,7 @@ namespace project
             var customer = Connection.LoadRecords<CustomerModel>();
             var employee = Connection.LoadRecords<EmployeeModel>();
 
-            if (!inventory.Any() || !customer.Any() || !employee.Any())
+            if (!inventory.Any() || !customer.Any() || !employee.Any())  // If they are empty
             {
                 MessageBox.Show("ERROR: TO CREATE A SALE, YOU FIRST NEED TO REGISTER AT LEAST ONE INVENTORY, ONE CUSTOMER, AND ONE EMPLOYEE.");
                 return;

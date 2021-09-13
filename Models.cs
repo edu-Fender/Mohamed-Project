@@ -16,7 +16,7 @@
         {
             get
             {
-                return $"{Id} {ItemId} {CustomerId} {EmployeeId} {SaleDate} {SaleAmount} {SaleQty} {DeliveryAmount} {PaymentMethod}";
+                return $"{Id} {ItemId} {CustomerId} {EmployeeId} {SaleDate} {SaleAmount} {SaleQty} {DeliveryAmount} {TotalSaleAmount} {PaymentMethod}";
             }
         }
     }

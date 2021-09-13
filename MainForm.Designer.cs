@@ -789,7 +789,7 @@ namespace project
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mousofa Furniture system";
+            this.Text = "Mousofa Furniture System";
             this.contextMenuStrip1.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
             this.Suppliers.ResumeLayout(false);

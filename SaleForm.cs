@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace project
@@ -25,6 +26,9 @@ namespace project
             {
                 List<SaleModel> sale = Connection.LoadRecords<SaleModel>();
 
+                comboBox1.SelectedIndex = int.Parse(sale[selectedIndex.Value].ItemId) - 1;  // It needs to have - 1 as ComboBox index is zero-based
+                comboBox2.SelectedIndex = int.Parse(sale[selectedIndex.Value].CustomerId) - 1;
+                comboBox3.SelectedIndex = int.Parse(sale[selectedIndex.Value].EmployeeId) - 1;
                 textBox4.Text = sale[selectedIndex.Value].SaleDate;
                 textBox5.Text = sale[selectedIndex.Value].SaleAmount;
                 textBox6.Text = sale[selectedIndex.Value].SaleQty;
@@ -35,9 +39,17 @@ namespace project
                 if (senderButton == "view")
                 {
                     button1.Enabled = false;
-                    foreach (TextBox ctrl in panel1.Controls)
+                    foreach (dynamic ctrl in panel1.Controls)
                     {
-                        ctrl.ReadOnly = true;
+                        if (ctrl is ComboBox)
+                        {
+                            ctrl.Enabled = false;
+                        }
+                        else if (ctrl is TextBox)
+                        {
+                            ctrl.ReadOnly = true;
+                        }
+
                     }
                 }
             }  
@@ -69,7 +81,7 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in panel1.Controls)  //Check if some field is null
+            foreach (Control ctrl in panel1.Controls)  // Check if some field is null
             {
                 if (String.IsNullOrEmpty(ctrl.Text))
                 {
@@ -94,9 +106,9 @@ namespace project
 
             SaleModel sale = new SaleModel
             {
-                ItemId = comboBox1.GetItemText(comboBox1.SelectedItem),  // Use substring to grab only the first char, with is the Id
-                CustomerId = comboBox3.GetItemText(comboBox2.SelectedItem),
-                EmployeeId = comboBox3.GetItemText(comboBox3.SelectedItem),
+                ItemId = comboBox1.GetItemText(comboBox1.SelectedItem).Split('.')[0],  // Use Split method to split the string by dot ".", grabing the first occurrence
+                CustomerId = comboBox3.GetItemText(comboBox2.SelectedItem).Split('.')[0],
+                EmployeeId = comboBox3.GetItemText(comboBox3.SelectedItem).Split('.')[0],
                 SaleDate = textBox4.Text,
                 SaleAmount = textBox5.Text,
                 SaleQty = textBox6.Text,

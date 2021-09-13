@@ -21,17 +21,19 @@ namespace project
             {
                 List<EmployeeModel> employee = Connection.LoadRecords<EmployeeModel>();
 
+                textBox6.Text = employee[selectedIndex.Value].Email;
+                textBox10.Text = employee[selectedIndex.Value].Password;
+                textBox11.Text = employee[selectedIndex.Value].Password;
                 textBox1.Text = employee[selectedIndex.Value].Type;
                 textBox2.Text = employee[selectedIndex.Value].FirstName;
                 textBox3.Text = employee[selectedIndex.Value].LastName;
                 textBox3_1.Text = employee[selectedIndex.Value].Gender;
                 textBox4.Text = employee[selectedIndex.Value].DateOfBirth;
-                textBox5.Text = employee[selectedIndex.Value].Number;
-                textBox6.Text = employee[selectedIndex.Value].Email;
+                textBox5.Text = employee[selectedIndex.Value].Number;                
                 textBox7.Text = employee[selectedIndex.Value].StartDate;
                 textBox8.Text = employee[selectedIndex.Value].Salary;
                 textBox9.Text = employee[selectedIndex.Value].Comission;
-                textBox10.Text = employee[selectedIndex.Value].Password;
+                
 
                 if (senderButton == "view")
                 {
@@ -46,7 +48,7 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in panel1.Controls)  //Check if some field is null
+            foreach (Control ctrl in panel1.Controls)  // Check if some field is null
             {
                 if (String.IsNullOrEmpty(ctrl.Text))
                 {
@@ -64,7 +66,13 @@ namespace project
             {
                 MessageBox.Show("ERROR: FIELDS 'SALARY' AND 'COMISSION' MUST BE INTEGERS");
                 return;
-            }             
+            }       
+            
+            if (textBox10.Text != textBox11.Text)  // Check if password fields patch
+            {
+                MessageBox.Show("ERROR: PASSWORDS DON'T MATCH.");
+                return;
+            }
 
             EmployeeModel employee = new EmployeeModel
             {

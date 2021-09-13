@@ -27,7 +27,7 @@ namespace project
             {
                 List<InventoryModel> inventory = Connection.LoadRecords<InventoryModel>();
 
-                comboBox1.Text = inventory[selectedIndex.Value].SupplierId;
+                comboBox1.SelectedIndex = int.Parse(inventory[selectedIndex.Value].SupplierId) - 1;  // It needs to have - 1 as ComboBox index is zero-based
                 textBox1.Text = inventory[selectedIndex.Value].Type;
                 textBox2.Text = inventory[selectedIndex.Value].Quantity;
                 textBox3.Text = inventory[selectedIndex.Value].Colour;
@@ -41,9 +41,16 @@ namespace project
                 if (senderButton == "view")
                 {
                     button1.Enabled = false;
-                    foreach (TextBox ctrl in panel1.Controls)
+                    foreach (dynamic ctrl in panel1.Controls)
                     {
-                        ctrl.ReadOnly = true;
+                        if (ctrl is ComboBox)
+                        {
+                            ctrl.Enabled = false;
+                        }
+                        else if (ctrl is TextBox)
+                        {
+                            ctrl.ReadOnly = true;
+                        }
                     }
                 }
             }
@@ -74,7 +81,7 @@ namespace project
 
             InventoryModel inventory = new InventoryModel
             {
-                SupplierId = comboBox1.GetItemText(comboBox1.SelectedItem),  // Why it only takes the first char??
+                SupplierId = comboBox1.GetItemText(comboBox1.SelectedItem).Split('.')[0], // Uses Split method to split the string by dot ".", grabing the first occurrence
                 Type = textBox1.Text,
                 Quantity = textBox2.Text,
                 Colour = textBox3.Text,

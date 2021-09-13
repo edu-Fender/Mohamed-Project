@@ -57,7 +57,7 @@ namespace project
                         connect.Execute($"update tblSales set ItemId = @ItemId, CustomerId = @CustomerId, EmployeeId = @EmployeeId, SaleDate = @SaleDate, SaleAmount = @SaleAmount, SaleQty = @SaleQty, DeliveryAmount = @DeliveryAmount, TotalSaleAmount = @TotalSaleAmount, PaymentMethod = @PaymentMethod where Id = {selectedIndex + 1}", list);
                         break;
                     case "SupplierModel":
-                        connect.Execute($"update tblSuppliers set (Name = @Name, Type = @Type, Number = @Number, Email = @Email, Address = @AddressId  where Id = {selectedIndex + 1}", list);
+                        connect.Execute($"update tblSuppliers set Name = @Name, Type = @Type, Number = @Number, Email = @Email, Address = @Address  where Id = {selectedIndex + 1}", list);
                         break;
                 }
             }

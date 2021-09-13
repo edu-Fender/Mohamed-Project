@@ -38,3 +38,4 @@ C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.csproj.CopyComplet
 C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.SupplierForm.resources
 C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.SaleForm.resources
 C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.CustomerForm.resources
+C:\Users\anewe\source\repos\Mohamed-Project\obj\Debug\project.LoginForm.resources
