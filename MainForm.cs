@@ -208,5 +208,14 @@ namespace project
             form.ShowDialog();
             refresh<SupplierModel>(listView5);
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            LoginForm form = new LoginForm();
+            form.ShowDialog();
+            this.Close();
+            return;
+        }
     }
 }
