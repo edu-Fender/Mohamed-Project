@@ -6,8 +6,8 @@ namespace project
 {
     public partial class SupplierForm : Form
     {
-        private int? selectedIndex;
-        private string senderButton;
+        private readonly int? selectedIndex;
+        private readonly string senderButton;
 
         public SupplierForm(int? selectedIndex, string senderButton)
         {

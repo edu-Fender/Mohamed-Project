@@ -6,8 +6,8 @@ namespace project
 {
     public partial class EmployeeForm : Form
     {
-        private int? selectedIndex;
-        private string senderButton;
+        private readonly int? selectedIndex;
+        private readonly string senderButton;
 
         public EmployeeForm(int? selectedIndex, string senderButton)
         {
@@ -21,18 +21,18 @@ namespace project
             {
                 List<EmployeeModel> employee = Connection.LoadRecords<EmployeeModel>();
 
-                textBox6.Text = employee[selectedIndex.Value].Email;
-                textBox10.Text = employee[selectedIndex.Value].Password;
-                textBox11.Text = employee[selectedIndex.Value].Password;
-                textBox1.Text = employee[selectedIndex.Value].Type;
-                textBox2.Text = employee[selectedIndex.Value].FirstName;
-                textBox3.Text = employee[selectedIndex.Value].LastName;
-                textBox3_1.Text = employee[selectedIndex.Value].Gender;
-                textBox4.Text = employee[selectedIndex.Value].DateOfBirth;
-                textBox5.Text = employee[selectedIndex.Value].Number;                
-                textBox7.Text = employee[selectedIndex.Value].StartDate;
-                textBox8.Text = employee[selectedIndex.Value].Salary;
-                textBox9.Text = employee[selectedIndex.Value].Comission;
+                textBox1.Text = employee[selectedIndex.Value].Email;
+                textBox2.Text = employee[selectedIndex.Value].Password;
+                textBox3.Text = employee[selectedIndex.Value].Password;
+                textBox4.Text = employee[selectedIndex.Value].Type;
+                textBox5.Text = employee[selectedIndex.Value].FirstName;
+                textBox6.Text = employee[selectedIndex.Value].LastName;
+                textBox7.Text = employee[selectedIndex.Value].Gender;
+                textBox8.Text = employee[selectedIndex.Value].DateOfBirth;
+                textBox9.Text = employee[selectedIndex.Value].Number;                
+                textBox10.Text = employee[selectedIndex.Value].StartDate;
+                textBox11.Text = employee[selectedIndex.Value].Salary;
+                textBox12.Text = employee[selectedIndex.Value].Comission;
                 
 
                 if (senderButton == "view")
@@ -59,8 +59,8 @@ namespace project
 
             try  // Check if the fields that must be integers are intergers
             {
-                int.Parse(textBox8.Text);
-                int.Parse(textBox9.Text);
+                int.Parse(textBox11.Text);
+                int.Parse(textBox12.Text);
             }
             catch
             {
@@ -68,7 +68,7 @@ namespace project
                 return;
             }       
             
-            if (textBox10.Text != textBox11.Text)  // Check if password fields patch
+            if (textBox2.Text != textBox3.Text)  // Check if password fields patch
             {
                 MessageBox.Show("ERROR: PASSWORDS DON'T MATCH.");
                 return;
@@ -76,17 +76,17 @@ namespace project
 
             EmployeeModel employee = new EmployeeModel
             {
-                Type = textBox1.Text,
-                FirstName = textBox2.Text,
-                LastName = textBox3.Text,
-                Gender = textBox3_1.Text,
-                DateOfBirth = textBox4.Text,
-                Number = textBox5.Text,
-                Email = textBox6.Text,
-                StartDate = textBox7.Text,
-                Salary = textBox8.Text,
-                Comission = textBox9.Text,
-                Password = textBox10.Text
+                Email = textBox1.Text,
+                Password = textBox2.Text,
+                Type = textBox4.Text,
+                FirstName = textBox5.Text,
+                LastName = textBox6.Text,
+                Gender = textBox7.Text,
+                DateOfBirth = textBox8.Text,
+                Number = textBox9.Text,                
+                StartDate = textBox10.Text,
+                Salary = textBox11.Text,
+                Comission = textBox12.Text
             };
 
             switch (senderButton)  // will find out the type of the list automatically 

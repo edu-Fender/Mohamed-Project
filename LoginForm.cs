@@ -6,8 +6,6 @@ namespace project
 {
     public partial class LoginForm : Form
     {
-        List<EmployeeModel> employee;
-
         public LoginForm()
         {
             InitializeComponent();
@@ -15,11 +13,11 @@ namespace project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            employee = Connection.LoadRecords<EmployeeModel>();
+            List<EmployeeModel> employees = Connection.LoadRecords<EmployeeModel>();
 
-            foreach (var table in employee)
+            foreach (var employee in employees)
             {
-                if (textBox1.Text == table.Email && textBox2.Text == table.Password)
+                if (textBox1.Text == employee.Email && textBox2.Text == employee.Password)
                 {
                     this.Hide();
                     MainForm form = new MainForm();
@@ -39,6 +37,12 @@ namespace project
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPassword form = new ForgotPassword();
+            form.ShowDialog();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             EmployeeForm form = new EmployeeForm(null, "add");
             form.ShowDialog();

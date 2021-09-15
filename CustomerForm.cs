@@ -12,9 +12,8 @@ namespace project
 {
     public partial class CustomerForm : Form
     {
-        private int? selectedIndex;
-        private string senderButton;
-        public int refresh { get; private set; }
+        private readonly int?  selectedIndex;
+        private readonly string senderButton;
 
         public CustomerForm(int? selectedIndex, string senderButton)
         {

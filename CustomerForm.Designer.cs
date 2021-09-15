@@ -92,7 +92,7 @@ namespace project
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(85, 266);
+            this.label4.Location = new System.Drawing.Point(83, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 69;
@@ -101,7 +101,7 @@ namespace project
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 153);
+            this.label2.Location = new System.Drawing.Point(70, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 71;
@@ -119,7 +119,7 @@ namespace project
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 192);
+            this.label3.Location = new System.Drawing.Point(96, 196);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 70;
@@ -128,7 +128,7 @@ namespace project
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(85, 231);
+            this.label12.Location = new System.Drawing.Point(84, 232);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(47, 13);
             this.label12.TabIndex = 62;

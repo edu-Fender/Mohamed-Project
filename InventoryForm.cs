@@ -6,8 +6,8 @@ namespace project
 {
     public partial class InventoryForm : Form
     {
-        private int? selectedIndex;
-        private string senderButton;
+        private readonly int? selectedIndex;
+        private readonly string senderButton;
 
         public InventoryForm(int? selectedIndex, string senderButton, List<SupplierModel> supplier)
         {
@@ -45,7 +45,8 @@ namespace project
                     {
                         if (ctrl is ComboBox)
                         {
-                            ctrl.Enabled = false;
+                            ctrl.DropDownStyle = ComboBoxStyle.Simple;
+                            ctrl.BackColor = System.Drawing.SystemColors.Control;
                         }
                         else if (ctrl is TextBox)
                         {

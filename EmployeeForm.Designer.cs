@@ -40,19 +40,19 @@ namespace project
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3_1 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -163,110 +163,110 @@ namespace project
             this.label12.TabIndex = 0;
             this.label12.Text = "Number:";
             // 
-            // textBox6
+            // textBox1
             // 
-            this.textBox6.Location = new System.Drawing.Point(0, 0);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(250, 20);
-            this.textBox6.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(0, 0);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 20);
+            this.textBox1.TabIndex = 1;
             // 
-            // textBox7
+            // textBox10
             // 
-            this.textBox7.Location = new System.Drawing.Point(0, 359);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(250, 20);
-            this.textBox7.TabIndex = 67;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(0, 284);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(250, 20);
-            this.textBox4.TabIndex = 64;
+            this.textBox10.Location = new System.Drawing.Point(0, 359);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(250, 20);
+            this.textBox10.TabIndex = 67;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(0, 394);
+            this.textBox8.Location = new System.Drawing.Point(0, 284);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(250, 20);
-            this.textBox8.TabIndex = 68;
+            this.textBox8.TabIndex = 64;
             // 
-            // textBox3
+            // textBox11
             // 
-            this.textBox3.Location = new System.Drawing.Point(0, 210);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(250, 20);
-            this.textBox3.TabIndex = 52;
+            this.textBox11.Location = new System.Drawing.Point(0, 394);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(250, 20);
+            this.textBox11.TabIndex = 68;
             // 
-            // textBox2
+            // textBox6
             // 
-            this.textBox2.Location = new System.Drawing.Point(0, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 20);
-            this.textBox2.TabIndex = 51;
+            this.textBox6.Location = new System.Drawing.Point(0, 210);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(250, 20);
+            this.textBox6.TabIndex = 52;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(0, 323);
+            this.textBox5.Location = new System.Drawing.Point(0, 175);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(250, 20);
-            this.textBox5.TabIndex = 65;
+            this.textBox5.TabIndex = 51;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(0, 323);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(250, 20);
+            this.textBox9.TabIndex = 65;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox3_1);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.textBox12);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.textBox11);
+            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.textBox10);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(156, 115);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 454);
             this.panel1.TabIndex = 60;
             // 
-            // textBox11
+            // textBox3
             // 
-            this.textBox11.Location = new System.Drawing.Point(0, 72);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.PasswordChar = '*';
-            this.textBox11.Size = new System.Drawing.Size(250, 20);
-            this.textBox11.TabIndex = 3;
+            this.textBox3.Location = new System.Drawing.Point(0, 72);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
+            this.textBox3.Size = new System.Drawing.Size(250, 20);
+            this.textBox3.TabIndex = 3;
             // 
-            // textBox1
+            // textBox4
             // 
-            this.textBox1.Location = new System.Drawing.Point(0, 139);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 20);
-            this.textBox1.TabIndex = 50;
+            this.textBox4.Location = new System.Drawing.Point(0, 139);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(250, 20);
+            this.textBox4.TabIndex = 50;
             // 
-            // textBox3_1
+            // textBox7
             // 
-            this.textBox3_1.Location = new System.Drawing.Point(0, 246);
-            this.textBox3_1.Name = "textBox3_1";
-            this.textBox3_1.Size = new System.Drawing.Size(250, 20);
-            this.textBox3_1.TabIndex = 53;
+            this.textBox7.Location = new System.Drawing.Point(0, 246);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(250, 20);
+            this.textBox7.TabIndex = 53;
             // 
-            // textBox9
+            // textBox12
             // 
-            this.textBox9.Location = new System.Drawing.Point(0, 430);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(250, 20);
-            this.textBox9.TabIndex = 70;
+            this.textBox12.Location = new System.Drawing.Point(0, 430);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(250, 20);
+            this.textBox12.TabIndex = 70;
             // 
-            // textBox10
+            // textBox2
             // 
-            this.textBox10.Location = new System.Drawing.Point(0, 36);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.PasswordChar = '*';
-            this.textBox10.Size = new System.Drawing.Size(250, 20);
-            this.textBox10.TabIndex = 2;
+            this.textBox2.Location = new System.Drawing.Point(0, 36);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(250, 20);
+            this.textBox2.TabIndex = 2;
             // 
             // panel3
             // 
@@ -290,6 +290,7 @@ namespace project
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(160, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 55);
@@ -321,11 +322,11 @@ namespace project
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(76, 190);
+            this.label13.Location = new System.Drawing.Point(56, 190);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 13);
+            this.label13.Size = new System.Drawing.Size(94, 13);
             this.label13.TabIndex = 80;
-            this.label13.Text = "Confirm Pass:";
+            this.label13.Text = "Repeat Password:";
             // 
             // EmployeeForm
             // 
@@ -375,24 +376,24 @@ namespace project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3_1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label13;
     }
 }

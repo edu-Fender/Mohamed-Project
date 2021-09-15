@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace project
 {
     public partial class SaleForm : Form
     {
-        private int? selectedIndex;
-        private string senderButton;
+        private readonly int? selectedIndex;
+        private readonly string senderButton;
 
         public SaleForm(int? selectedIndex, string senderButton, List<InventoryModel> inventory, List<CustomerModel> customer, List<EmployeeModel> employee)
         {
@@ -43,13 +42,13 @@ namespace project
                     {
                         if (ctrl is ComboBox)
                         {
-                            ctrl.Enabled = false;
+                            ctrl.DropDownStyle = ComboBoxStyle.Simple;
+                            ctrl.BackColor = System.Drawing.SystemColors.Control;
                         }
                         else if (ctrl is TextBox)
                         {
                             ctrl.ReadOnly = true;
                         }
-
                     }
                 }
             }  
