@@ -25,6 +25,8 @@ namespace project
 
             if (senderButton == "view" || senderButton == "update")
             {
+                button1.Text = "SAVE CHANGES";
+
                 List<CustomerModel> customer = Connection.LoadRecords<CustomerModel>();
 
                 textBox1.Text = customer[selectedIndex.Value].FirstName;
@@ -54,17 +56,7 @@ namespace project
                     MessageBox.Show("ERROR: ALL FIELDS MUST BE FILLED!!");
                     return;
                 }
-            }
-
-            try  // Check if the fields that must be integers are intergers
-            {
-                int.Parse(textBox1.Text);
-            }
-            catch
-            {
-                MessageBox.Show("ERROR: FIELD 'CUSTOMER ID' MUST BE INTEGER!");
-                return;
-            }
+            }         
 
             CustomerModel customer = new CustomerModel
             {

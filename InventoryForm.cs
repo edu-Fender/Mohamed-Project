@@ -9,11 +9,15 @@ namespace project
         private readonly int? selectedIndex;
         private readonly string senderButton;
 
-        public InventoryForm(int? selectedIndex, string senderButton, List<SupplierModel> supplier)
+        public InventoryForm(int? selectedIndex, string senderButton)
         {
             InitializeComponent();
 
-            foreach (dynamic table in supplier)  // Show the information from each supplier on the ComboBox
+            //comboBox1.DataSource = Connection.LoadRecords<SupplierModel>();
+            //comboBox1.ValueMember = "Id";
+            //comboBox1.DisplayMember = "Id" + "Name" + "Email";
+
+            foreach (dynamic table in Connection.LoadRecords<SupplierModel>())  // Show the information from each supplier on the ComboBox
             {
                 string str = $"{table.Id}.    {table.Name} {table.Email}";
                 comboBox1.Items.Add(str);
@@ -25,6 +29,8 @@ namespace project
 
             if (senderButton == "view" || senderButton == "update")
             {
+                button1.Text = "SAVE CHANGES";
+
                 List<InventoryModel> inventory = Connection.LoadRecords<InventoryModel>();
 
                 comboBox1.SelectedIndex = int.Parse(inventory[selectedIndex.Value].SupplierId) - 1;  // It needs to have - 1 as ComboBox index is zero-based

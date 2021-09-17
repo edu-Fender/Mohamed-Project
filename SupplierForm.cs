@@ -19,6 +19,8 @@ namespace project
 
             if (senderButton == "view" || senderButton == "update")
             {
+                button1.Text = "SAVE CHANGES";
+
                 List<SupplierModel> supplier = Connection.LoadRecords<SupplierModel>();
 
                 textBox1.Text = supplier[selectedIndex.Value].Name;

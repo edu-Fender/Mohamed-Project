@@ -17,22 +17,28 @@ namespace project
             this.selectedIndex = selectedIndex;
             this.senderButton = senderButton;
 
+            DateTime datetime = DateTime.UtcNow.Date;  // Set TextBox date of today
+            textBox8.Text = datetime.ToString("dd/MM/yyyy");  
+
+
             if (senderButton == "view" || senderButton == "update")
             {
+                button1.Text = "SAVE CHANGES";
+
                 List<EmployeeModel> employee = Connection.LoadRecords<EmployeeModel>();
 
                 textBox1.Text = employee[selectedIndex.Value].Email;
                 textBox2.Text = employee[selectedIndex.Value].Password;
                 textBox3.Text = employee[selectedIndex.Value].Password;
                 textBox4.Text = employee[selectedIndex.Value].Type;
-                textBox5.Text = employee[selectedIndex.Value].FirstName;
-                textBox6.Text = employee[selectedIndex.Value].LastName;
+                textBox4.Text = employee[selectedIndex.Value].FirstName;
+                textBox5.Text = employee[selectedIndex.Value].LastName;
                 textBox7.Text = employee[selectedIndex.Value].Gender;
-                textBox8.Text = employee[selectedIndex.Value].DateOfBirth;
-                textBox9.Text = employee[selectedIndex.Value].Number;                
-                textBox10.Text = employee[selectedIndex.Value].StartDate;
-                textBox11.Text = employee[selectedIndex.Value].Salary;
-                textBox12.Text = employee[selectedIndex.Value].Comission;
+                textBox6.Text = employee[selectedIndex.Value].DateOfBirth;
+                textBox7.Text = employee[selectedIndex.Value].Number;                
+                textBox8.Text = employee[selectedIndex.Value].StartDate;
+                textBox9.Text = employee[selectedIndex.Value].Salary;
+                textBox10.Text = employee[selectedIndex.Value].Comission;
                 
 
                 if (senderButton == "view")
@@ -43,6 +49,22 @@ namespace project
                         ctrl.ReadOnly = true;
                     }
                 }
+            }
+        }
+        
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedIndex == 0)
+            {
+                textBox9.Text = "15000";
+            }
+            else if (comboBox2.SelectedIndex == 1)
+            {
+                textBox9.Text = "10000";
+            }
+            else if (comboBox2.SelectedIndex == 2)
+            {
+                textBox9.Text = "8000";
             }
         }
 
@@ -59,8 +81,8 @@ namespace project
 
             try  // Check if the fields that must be integers are intergers
             {
-                int.Parse(textBox11.Text);
-                int.Parse(textBox12.Text);
+                int.Parse(textBox9.Text);
+                int.Parse(textBox10.Text);
             }
             catch
             {
@@ -79,14 +101,14 @@ namespace project
                 Email = textBox1.Text,
                 Password = textBox2.Text,
                 Type = textBox4.Text,
-                FirstName = textBox5.Text,
-                LastName = textBox6.Text,
+                FirstName = textBox4.Text,
+                LastName = textBox5.Text,
                 Gender = textBox7.Text,
-                DateOfBirth = textBox8.Text,
-                Number = textBox9.Text,                
-                StartDate = textBox10.Text,
-                Salary = textBox11.Text,
-                Comission = textBox12.Text
+                DateOfBirth = textBox6.Text,
+                Number = textBox7.Text,                
+                StartDate = textBox8.Text,
+                Salary = textBox9.Text,
+                Comission = textBox10.Text
             };
 
             switch (senderButton)  // will find out the type of the list automatically 
@@ -132,5 +154,6 @@ namespace project
 
             this.Close();  // In case all the Text Box were empty
         }
+
     }
 }
