@@ -42,16 +42,18 @@ namespace project
         //// ------------------------------------ SALE ------------------------------------
         private void button1_Click(object sender, EventArgs e)
         {           
-            if (listView1.SelectedItems.Count > 0)
+            /*if (listView1.SelectedItems.Count > 0)
             {
                 selectedIndex = listView1.Items.IndexOf(listView1.SelectedItems[0]);
                 SaleForm form = new SaleForm(selectedIndex, "view");
                 form.ShowDialog();
             }
+            */
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            /*
             if (listView1.SelectedItems.Count > 0)
             {
                 selectedIndex = listView1.Items.IndexOf(listView1.SelectedItems[0]);
@@ -59,6 +61,7 @@ namespace project
                 form.ShowDialog();
                 refresh<SaleModel>(listView1);
             }     
+            */
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -207,9 +210,8 @@ namespace project
                 "\n\n- Click \"ADD NEW RECORD\" if you want to add a record. A form containing the text boxes that need to be filled will appear." +
                 "\n\n- To view the added record more clearly (and to be able to copy the values), select the record then click \"VIEW RECORD\" button)." +
                 "\n\n- To update the record, select the record and click on \"UPDATE RECORD\", change the fields you want to be updated." +
-                "\n\n\nIMPORTANT: To add a new Sale, first you have to register at least one Item." +
-                "Although you can create a new Sale without registering the Customer, it's highly recommended that you do register the Customer." +
-                "Similarly, you can only add a new Inventory item if you have already added at least ONE Supplier.", "TUTORIAL");
+                "\n\n\nIMPORTANT: Although you can create a new Sale without registering the Customer, it's highly recommended that you do register the Customer. " +
+                "Similarly, you can add new products to the inventory without resgistering the Supplier, but it's not recommended that you do that", "TUTORIAL");
         }
     }
 }

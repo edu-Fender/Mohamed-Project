@@ -29,24 +29,42 @@ namespace project
 
                 textBox1.Text = employee[selectedIndex.Value].Email;
                 textBox2.Text = employee[selectedIndex.Value].Password;
-                textBox3.Text = employee[selectedIndex.Value].Password;
-                textBox4.Text = employee[selectedIndex.Value].Type;
+                textBox3.Text = employee[selectedIndex.Value].Password;                
                 textBox4.Text = employee[selectedIndex.Value].FirstName;
                 textBox5.Text = employee[selectedIndex.Value].LastName;
-                textBox7.Text = employee[selectedIndex.Value].Gender;
+                comboBox1.Text = employee[selectedIndex.Value].Gender;
                 textBox6.Text = employee[selectedIndex.Value].DateOfBirth;
-                textBox7.Text = employee[selectedIndex.Value].Number;                
+                textBox7.Text = employee[selectedIndex.Value].Number;
+                comboBox2.Text = employee[selectedIndex.Value].Type;
                 textBox8.Text = employee[selectedIndex.Value].StartDate;
                 textBox9.Text = employee[selectedIndex.Value].Salary;
                 textBox10.Text = employee[selectedIndex.Value].Comission;
-                
 
                 if (senderButton == "view")
                 {
                     button1.Enabled = false;
-                    foreach (TextBox ctrl in panel1.Controls)
+                    foreach (dynamic ctrl in panel1.Controls)
                     {
-                        ctrl.ReadOnly = true;
+                        if (ctrl is ComboBox)
+                        {
+                            ctrl.Enabled = false;
+                        }
+                        else if (ctrl is TextBox)
+                        {
+                            ctrl.ReadOnly = true;
+                        }
+                    }
+
+                    foreach (dynamic ctrl in panel4.Controls)
+                    {
+                        if (ctrl is ComboBox)
+                        {
+                            ctrl.Enabled = false;
+                        }
+                        else if (ctrl is TextBox)
+                        {
+                            ctrl.ReadOnly = true;
+                        }
                     }
                 }
             }
@@ -99,13 +117,13 @@ namespace project
             EmployeeModel employee = new EmployeeModel
             {
                 Email = textBox1.Text,
-                Password = textBox2.Text,
-                Type = textBox4.Text,
+                Password = textBox2.Text,                
                 FirstName = textBox4.Text,
                 LastName = textBox5.Text,
-                Gender = textBox7.Text,
+                Gender = comboBox1.Text,
                 DateOfBirth = textBox6.Text,
-                Number = textBox7.Text,                
+                Number = textBox7.Text,
+                Type = comboBox2.Text,
                 StartDate = textBox8.Text,
                 Salary = textBox9.Text,
                 Comission = textBox10.Text

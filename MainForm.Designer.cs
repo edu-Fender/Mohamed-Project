@@ -424,7 +424,7 @@ namespace project
             this.Costumers.Name = "Costumers";
             this.Costumers.Size = new System.Drawing.Size(792, 421);
             this.Costumers.TabIndex = 2;
-            this.Costumers.Text = "Custumers";
+            this.Costumers.Text = "Customers";
             this.Costumers.UseVisualStyleBackColor = true;
             // 
             // listView3
@@ -732,6 +732,7 @@ namespace project
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(2, 349);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(255, 70);

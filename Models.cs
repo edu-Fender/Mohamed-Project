@@ -1,4 +1,6 @@
-﻿namespace project
+﻿using System.Collections.Generic;
+
+namespace project
 {
     public class SaleModel
     {

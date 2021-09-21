@@ -13,15 +13,7 @@ namespace project
         {
             InitializeComponent();
 
-            //comboBox1.DataSource = Connection.LoadRecords<SupplierModel>();
-            //comboBox1.ValueMember = "Id";
-            //comboBox1.DisplayMember = "Id" + "Name" + "Email";
-
-            foreach (dynamic table in Connection.LoadRecords<SupplierModel>())  // Show the information from each supplier on the ComboBox
-            {
-                string str = $"{table.Id}.    {table.Name} {table.Email}";
-                comboBox1.Items.Add(str);
-            }
+            refreshComboBox(Connection.LoadRecords<SupplierModel>());            
 
             this.Select();
             this.selectedIndex = selectedIndex;
@@ -63,11 +55,28 @@ namespace project
             }
         }
 
+        private void refreshComboBox<T>(List<T> list)
+        {
+            foreach (dynamic table in list)
+            {
+                switch (typeof(T).Name)
+                {
+                    case "SupplierModel":
+                        comboBox1.Items.Add($"{table.Id}.    {table.Name} {table.Type}");
+                        break;
+                }
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             foreach (Control ctrl in panel1.Controls)  //Check if some field is null
             {
-                if (String.IsNullOrEmpty(ctrl.Text))
+                if (ctrl.Name == "comboBox1")  // Ignores the ComboBox, it means it can be empty
+                {
+                    continue;
+                }
+                else if (String.IsNullOrEmpty(ctrl.Text))
                 {
                     MessageBox.Show("ERROR: ALL FIELDS MUST BE FILLED!!");
                     return;
@@ -88,7 +97,7 @@ namespace project
 
             InventoryModel inventory = new InventoryModel
             {
-                SupplierId = comboBox1.GetItemText(comboBox1.SelectedItem).Split('.')[0], // Uses Split method to split the string by dot ".", grabing the first occurrence
+                SupplierId = comboBox1.Text.Split('.')[0], // Uses Split method to split the string by dot ".", grabing the first occurrence
                 Type = textBox1.Text,
                 Quantity = textBox2.Text,
                 Colour = textBox3.Text,
@@ -142,6 +151,14 @@ namespace project
             }
 
             this.Close();  // In case all the Text Box were empty
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SupplierForm form = new SupplierForm(null, "add");
+            form.ShowDialog();
+            refreshComboBox(Connection.LoadRecords<SupplierModel>());
+            return;
         }
     }
 }

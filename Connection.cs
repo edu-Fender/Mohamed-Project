@@ -13,6 +13,7 @@ namespace project
 {
     public class Connection
     {
+
         public static void AddRecord<T>(T list)
         {
             using (IDbConnection connect = new SQLiteConnection(ConfigurationManager.ConnectionStrings["default"].ConnectionString))

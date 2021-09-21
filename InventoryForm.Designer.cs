@@ -55,6 +55,7 @@ namespace project
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -291,6 +292,17 @@ namespace project
             this.label9.TabIndex = 79;
             this.label9.Text = "Supplier ID:";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(393, 118);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(51, 13);
+            this.linkLabel1.TabIndex = 80;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Add New";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // InventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,6 +310,7 @@ namespace project
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(514, 784);
             this.ControlBox = false;
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label11);
@@ -352,6 +365,7 @@ namespace project
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
